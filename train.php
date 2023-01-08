@@ -5,7 +5,7 @@
 <?php include "include/header.php"; ?>
 <?php
 if (isset($_GET["checkin"])) {
-    $train_go_check_in_time =   date('Y-m-d H:m:i');
+    $train_go_check_in_time =   date('Y-m-d H:i:m');
     $train_go_check_in_by   =   $_SESSION['username'];
 
     if (count($_POST["train"]) > 0) {
