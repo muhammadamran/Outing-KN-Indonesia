@@ -43,10 +43,22 @@ if ($Rheader['role'] == 'admin') {
             </a>
         </div> -->
         <div class="mobile-block block-minicart">
+            <a class="link-to-cart <?= $uriSegments[2] == 'talent.php' ? 'active' : '' ?>" href="talent.php">
+                <span class="text">
+                    <div style="font-size: 25px;margin-bottom: 5px;">
+                        <i class="fas fa-trophy"></i>
+                        <!-- 🎉 -->
+                    </div>
+                    Talent
+                </span>
+            </a>
+        </div>
+        <div class="mobile-block block-minicart">
             <a class="link-to-cart <?= $uriSegments[2] == 'voting.php' ? 'active' : '' ?>" href="voting.php">
                 <span class="text">
                     <div style="font-size: 25px;margin-bottom: 5px;">
                         <i class="fas fa-star-half-alt"></i>
+                        <!-- ✨ -->
                     </div>
                     Voting
                 </span>
@@ -123,38 +135,48 @@ if ($Rheader['role'] == 'admin') {
             <b class="title"><?= $showD ?> </b>
             <b class="title" style="font-size: 16px;font-weight: 500;font-variant-caps: petite-caps;">Access: <?= $Rheader['role']; ?> </b>
             <b class="title" style="font-size: 16px;font-weight: 500;font-variant-caps: petite-caps;">Contact: <?= $Rheader['tlp']; ?> </b>
+            <?php if ($Rheader['role'] == 'admin') { ?>
+                <div style="display: flex;justify-content: flex-start;align-items: center;margin-top:20px">
+                    <div>
+                        <a href="https://discord.gg/c9pha7A3" target="_blank" class="a-global-icon-discord">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                    </div>
+                    <div style="margin-left: 5px;">
+                        <a href="" class="a-global-icon-wa">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            <?php } ?>
             <hr>
         </div>
-        <div>
-            location
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.134189836487!2d107.6202453!3d-6.874521100000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x785d6dbcd145a004!2zNsKwNTInMjguMyJTIDEwN8KwMzcnMTIuOSJF!5e0!3m2!1sen!2sid!4v1673173409878!5m2!1sen!2sid" style="width:100%;height:300px;" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div style="margin-top: -18px;margin-bottom: 5px;">
+            <b class="title" style="font-size: 13px;font-weight: 900;font-variant-caps: petite-caps;color: #fff;margin-top: -58px;"><i class="fas fa-map-marker-alt"></i> Location: Sheraton Bandung Hotel & Towers </b>
         </div>
+        <div id="googleMap" style="width:100%;height:380px;"></div>
         <div style="margin: -15px;margin-top: 70px;">
             <img src="assets/apps/bg.png" alt="">
         </div>
     </div>
 </div>
-<script src="dist/markers-on-map-1.4.0.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly" defer></script>
 <script src="http://maps.googleapis.com/maps/api/js"></script>
 <script>
     function initialize() {
         var propertiPeta = {
-            center: new google.maps.LatLng(-6.873512015060014, 107.6203027306792),
-            zoom: 9,
+            center: new google.maps.LatLng(-6.8746317669106585, 107.62022027905368),
+            zoom: 18,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
 
         var peta = new google.maps.Map(document.getElementById("googleMap"), propertiPeta);
 
-        // membuat Marker
         var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(-6.873512015060014, 107.6203027306792),
+            position: new google.maps.LatLng(-6.8746317669106585, 107.62022027905368),
             map: peta,
             icon: "assets/icon/maker.png"
         });
-
     }
-
-    // event jendela di-load  
     google.maps.event.addDomListener(window, 'load', initialize);
 </script>

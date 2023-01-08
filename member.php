@@ -3,16 +3,15 @@
 <?php include "include/head.php"; ?>
 <?php include "include/dataTablesCSS.php"; ?>
 <?php include "include/header.php"; ?>
-<title>Member | Kuehne+Nagel Indonesia - BDG Gathering</title>
+<title>All Member | Kuehne+Nagel Indonesia - BDG Gathering</title>
 <div class="page-contain">
     <!-- Main content -->
     <div id="main-content" class="main-content">
         <!-- Page -->
-        <div class="hero-section hero-background-bus style-02" style="margin-top: 49px;">
-            <h1 class="page-title">Members</h1>
+        <div class="hero-section hero-background-member style-02" style="margin-top: 49px;">
+            <h1 class="page-title">All Members</h1>
             <nav class="biolife-nav">
                 <ul style="text-transform: uppercase;">
-                    <!-- <li class="nav-item"><span class="current-page">PIC: <?= $Rrole['fullname']; ?></span></li> -->
                     <li class="nav-item"><span class="current-page">Time: <font id="clock"> </font></span></li>
                 </ul>
             </nav>

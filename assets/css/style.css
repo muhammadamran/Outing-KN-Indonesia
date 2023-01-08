@@ -794,8 +794,22 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
+.hero-background-member{
+    background-image: url('../images/member.png');
+    height: 194px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .hero-background-voting{
     background-image: url('../images/voting.png');
+    height: 194px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hero-background-talent{
+    background-image: url('../images/talent.png');
     height: 194px;
     background-position: center;
     background-repeat: no-repeat;
@@ -14701,6 +14715,13 @@ body.open-quickview-block .biolife-quickview-block{
     border-radius: 10px;
 }
 
+.alert-green {
+    padding: 12px;
+    background-color: #08c792;
+    color: white;
+    border-radius: 10px;
+}
+
 /* Success */
 .alert-success-c {
     padding: 12px;
@@ -14792,4 +14813,22 @@ body.open-quickview-block .biolife-quickview-block{
     background-color: transparent;
     border-radius: 10px;
     border: 2px solid #fff;
+}
+
+.a-global-icon-discord {
+    background: #fff;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 10px;
+    color: #00346f;
+    box-shadow: 6px 7px 1px 0px rgb(0 0 0 / 11%);
+}
+
+.a-global-icon-wa {
+    background: #fff;
+    padding: 5px 9px;
+    font-size: 20px;
+    border-radius: 10px;
+    color: #00346f;
+    box-shadow: 6px 7px 1px 0px rgb(0 0 0 / 11%);
 }
