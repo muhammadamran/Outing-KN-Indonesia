@@ -25,7 +25,7 @@ if (isset($_POST["add_"])) {
         $query = $db->query("INSERT INTO tb_talent 
                              (id,pictures,name_group,desc_group,status_group)
                              VALUES
-                             ('','$file_name','$GroupName','$Description','SHOW')");
+                             ('','$file_name','$GroupName','$Description','None')");
         if ($query) {
             echo "<script>window.location.href='talent.php?Success';</script>";
         } else {
@@ -54,7 +54,7 @@ if (isset($_POST["add_"])) {
         <div class="product-related-box single-layout">
             <div class="biolife-title-box lg-margin-bottom-26px-im" style="margin-top: -45px;margin-bottom: -30px;">
                 <div>
-                    <img src="assets/icon/group.png" alt="bus">
+                    <img src="assets/icon/badge.png" alt="Champion">
                 </div>
                 <span class="subtitle">Data Talent</span>
                 <h3 class="main-title">Talent</h3>
@@ -118,7 +118,7 @@ if (isset($_POST["add_"])) {
                 </div>
                 <div class="page-divider"></div>
                 <!-- alert -->
-                <div style="padding: 10px;">
+                <div style="padding: 10px;margin-bottom: 10px;margin-top: -15px;">
                     <?php if (isset($_GET['Success'])) { ?>
                         <!-- Success -->
                         <div class="alert-success">
@@ -170,9 +170,9 @@ if (isset($_POST["add_"])) {
                     <table id="C_TableDefault" class="table table-bordered first">
                         <thead>
                             <tr>
-                                <th style="width: 5px;" class="no-sort"></th>
+                                <th class="no-sort"></th>
                                 <th style="text-align: center;font-size: 12px;font-weight: bold;" class="no-sort">Talent<font style="color:transparent">.</font>Name</th>
-                                <th style="text-align: center;font-size: 12px;font-weight: bold;" class="no-sort">Perform</th>
+                                <th style="text-align: center;font-size: 12px;font-weight: bold;" class="no-sort">Status</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -186,26 +186,39 @@ if (isset($_POST["add_"])) {
                                     <tr>
                                         <td>
                                             <div>
-                                                <img src="assets/talent/<?= $row['pictures'] ?>" alt="Talent <?= $row['name_group'] ?>">
+                                                <img src="assets/talent/<?= $row['pictures'] ?>" alt="Talent <?= $row['name_group'] ?>" style="width: 300px;height: 100px;">
                                             </div>
                                         </td>
                                         <td>
-                                            <div style="display: flex;justify-content:flex-start;align-items: center;">
+                                            <div style="display: flex;justify-content:flex-start;align-items: center;margin-top: 25px;">
                                                 <span id="copyBtn" class="table-icon">
-                                                    <i class="far fa-clipboard"></i>
+                                                    <i class="far fa-users"></i>
                                                 </span>
                                                 <div style="margin-left: 5px;display: grid;text-align: initial;">
-                                                    <div style="font-size: 10px;font-weight: 900;display: flex;justify-content: flex-start;">
+                                                    <div style="font-size: 14px;font-weight: 900;display: flex;justify-content: flex-start;">
                                                         <?= $row['name_group']; ?>
                                                     </div>
                                                     <div style="font-size: 10px;font-weight: 300;display: flex;justify-content: flex-start;">
-                                                        <?= $row['desc']; ?>
+                                                        <?= $row['desc_group']; ?>
                                                     </div>
                                                 </div>
                                             </div>
                                         </td>
                                         <td>
-                                            <?= $row['perform']; ?>
+                                            <?php if ($row['status_group'] == 'None') { ?>
+                                                <div style="display: flex;justify-content:flex-start;align-items: center;margin-top: 35px;">
+                                                    <a href="#Show<?= $row['id']; ?>" class="btn btn-sm btn-green" data-toggle="modal" title="Delete Users" style="margin-left: 5px;">
+                                                        <i class="fas fa-toggle-off"></i>
+                                                    </a>
+                                                </div>
+                                            <?php } else if ($row['status_group'] == 'Show') { ?>
+
+                                                <div style="display: flex;justify-content:flex-start;align-items: center;margin-top: 35px;">
+                                                    <a href="#None<?= $row['id']; ?>" class="btn btn-sm btn-primary" data-toggle="modal" title="Delete Users" style="margin-left: 5px;">
+                                                        <i class="fas fa-toggle-on"></i>
+                                                    </a>
+                                                </div>
+                                            <?php } ?>
                                         </td>
                                     </tr>
                                 <?php } ?>
