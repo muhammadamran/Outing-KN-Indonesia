@@ -36,9 +36,9 @@ if (isset($_GET["cencel"])) {
                                                         train_go_check_in_by=NULL
                              WHERE id IN ($all)");
         if ($query) {
-            header("Location: ./train.php?Success");
+            header("Location: ./train.php?SuccessC");
         } else {
-            header("Location: ./train.php?Failed");
+            header("Location: ./train.php?FailedC");
         }
     } else {
         header("Location: ./train.php?SelectedPlease");
@@ -75,7 +75,7 @@ if (isset($_GET["cencel"])) {
                     <div class="page-divider"></div>
                     <div style="display: flex;justify-content: flex-start;align-items: center;margin-bottom: 10px;">
                         <button class=" btn btn-sm btn-primary" id="btn-checkin-yes" style="margin-left: 10px;"><i class="fas fa-user-check"></i> Check In</button>
-                        <button class="btn btn-sm btn-green" id="btn-checkin-cencel" style="margin-left: 10px;"><i class="fas fa-user-times"></i> Check In</button>
+                        <button class="btn btn-sm btn-green" id="btn-checkin-cencel" style="margin-left: 10px;"><i class="fas fa-user-times"></i> Cencel Check In</button>
                     </div>
                     <div class="page-divider"></div>
                     <div style="margin-top: -15px;margin-bottom: 10px;">
@@ -110,6 +110,36 @@ if (isset($_GET["cencel"])) {
                                     <span class="closebtn" onclick="this.parentElement.style.display='none';" style="margin-top: -45px;margin-right: 0px;">&times;</span>
                                 </div>
                                 <!-- End Failed -->
+                            <?php } ?>
+                            <?php if (isset($_GET['SuccessC'])) { ?>
+                                <!-- SuccessC -->
+                                <div class="alert-success-c">
+                                    <div style="display: flex;justify-content: center;align-items: center;">
+                                        <div>
+                                            <i class="fas fa-user-check" style="font-size: 40px;"></i>
+                                        </div>
+                                        <div style="margin-left: 5px;">
+                                            <strong> Check In Cencel!</strong>
+                                        </div>
+                                    </div>
+                                    <span class="closebtn" onclick="this.parentElement.style.display='none';" style="margin-top: -45px;margin-right: 0px;">&times;</span>
+                                </div>
+                                <!-- End SuccessC -->
+                            <?php } ?>
+                            <?php if (isset($_GET['FailedC'])) { ?>
+                                <!-- FailedC -->
+                                <div class="alert-failed-c">
+                                    <div style="display: flex;justify-content: center;align-items: center;">
+                                        <div>
+                                            <i class="fas fa-user-check" style="font-size: 40px;"></i>
+                                        </div>
+                                        <div style="margin-left: 5px;">
+                                            <strong> Check In Cencel Failed!</strong>
+                                        </div>
+                                    </div>
+                                    <span class="closebtn" onclick="this.parentElement.style.display='none';" style="margin-top: -45px;margin-right: 0px;">&times;</span>
+                                </div>
+                                <!-- End FailedC -->
                             <?php } ?>
                         </div>
                         <!-- end alert -->
@@ -197,13 +227,31 @@ if (isset($_GET["cencel"])) {
                                                                 <?= $row['train_go_check_in']; ?>
                                                             </div>
                                                             <div style="font-size: 10px;font-weight: 300;display: flex;justify-content: flex-start;">
-                                                                <?= $row['train_go_check_in_time']; ?>/<?= $row['train_go_check_in_by']; ?>
+                                                                <?php
+                                                                $alldate = $row['train_go_check_in_time'];
+                                                                $tgl = substr($alldate, 0, 10);
+                                                                $time = substr($alldate, 10, 20);
+                                                                ?>
+                                                                <?= $time; ?><br><?= $row['train_go_check_in_by']; ?>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </td>
                                             <?php } else if ($row['train_go_check_in'] == 'Cencel') { ?>
                                                 <td>
+                                                    <div style="display: flex;justify-content:flex-start;align-items: center;" class="blink">
+                                                        <div class="waiting-icon-cencel">
+                                                            <i class="fas fa-clock"></i>
+                                                        </div>
+                                                        <div style="margin-left: 5px;display: grid;text-align: initial;margin-top: 10px;">
+                                                            <div style="font-size: 10px;font-weight: 900;display: flex;justify-content: flex-start;">
+                                                                <font>Waiting</font>
+                                                            </div>
+                                                            <div style="font-size: 10px;font-weight: 300;display: flex;justify-content: flex-start;">
+                                                                <?= $row['train_go_check_in']; ?>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </td>
                                             <?php } ?>
                                         </tr>

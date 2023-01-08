@@ -14701,6 +14701,21 @@ body.open-quickview-block .biolife-quickview-block{
     border-radius: 10px;
 }
 
+/* Success */
+.alert-success-c {
+    padding: 12px;
+    background-color: #08c792;
+    color: white;
+    border-radius: 10px;
+}
+
+.alert-failed-c {
+    padding: 12px;
+    background-color: #f44336;
+    color: white;
+    border-radius: 10px;
+}
+
 /* End Danger */
 .closebtn {
     margin-left: 15px;
@@ -14739,6 +14754,15 @@ body.open-quickview-block .biolife-quickview-block{
     font-size: 12px;
     background: #f2f2f8;
     color: #82849a;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.waiting-icon-cencel {
+    padding: 5px;
+    font-size: 12px;
+    background: #08c792;
+    color: #fff;
     border-radius: 5px;
     margin-top: 10px;
 }
