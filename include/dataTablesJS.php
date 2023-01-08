@@ -13,6 +13,20 @@
             iDisplayLength: -1
         });
     });
+    // 10
+    $(document).ready(function() {
+        $('#C_TableDefault_L').DataTable({
+            "order": [],
+            lengthMenu: [
+                [10, 25, 50, -1],
+                [10, 25, 50, 'All'],
+            ],
+            "columnDefs": [{
+                "targets": 'no-sort',
+                "orderable": false,
+            }],
+        });
+    });
 </script>
 <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 <script src="assets/datatables/js/dataTables.bootstrap4.min.js"></script>

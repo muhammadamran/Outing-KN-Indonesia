@@ -12,7 +12,7 @@ if (isset($_GET["checkin"])) {
 
         $all = implode(",", $_POST["train"]);
 
-        $query = $db->query("UPDATE tb_member_c SET train_go_check_in='Check In',
+        $query = $db->query("UPDATE tb_member SET train_go_check_in='Check In',
                                                         train_go_check_in_time='$train_go_check_in_time',
                                                         train_go_check_in_by='$train_go_check_in_by'
                              WHERE id IN ($all)");
@@ -31,7 +31,7 @@ if (isset($_GET["cencel"])) {
 
         $all = implode(",", $_POST["train"]);
 
-        $query = $db->query("UPDATE tb_member_c SET train_go_check_in='Cencel',
+        $query = $db->query("UPDATE tb_member SET train_go_check_in='Cencel',
                                                         train_go_check_in_time=NULL,
                                                         train_go_check_in_by=NULL
                              WHERE id IN ($all)");
@@ -54,7 +54,7 @@ if (isset($_GET["cencel"])) {
             <h1 class="page-title">Train G-<?= $Rrole['train_go']; ?></h1>
             <nav class="biolife-nav">
                 <ul style="text-transform: uppercase;">
-                    <li class="nav-item"><span class="current-page">PIC: <?= $Rrole['fullname']; ?></span></li>
+                    <!-- <li class="nav-item"><span class="current-page">PIC: <?= $Rrole['fullname']; ?></span></li> -->
                     <li class="nav-item"><span class="current-page">Time: <font id="clock"> </font></span></li>
                 </ul>
             </nav>
@@ -63,9 +63,12 @@ if (isset($_GET["cencel"])) {
 
         <div class="product-related-box single-layout">
             <div class="biolife-title-box lg-margin-bottom-26px-im" style="margin-top: -45px;margin-bottom: -30px;">
-                <span class="biolife-icon icon-organic"></span>
-                <span class="subtitle">All the best item for You</span>
-                <h3 class="main-title">Related Products</h3>
+                <!-- <span class="biolife-icon icon-organic"></span> -->
+                <div>
+                    <img src="assets/icon/train.png" alt="Train">
+                </div>
+                <span class="subtitle">Data List Train G-<?= $Rrole['train_go']; ?> </span>
+                <h3 class="main-title">Train G-<?= $Rrole['train_go']; ?></h3>
             </div>
         </div>
 
@@ -161,7 +164,7 @@ if (isset($_GET["cencel"])) {
                             <tbody>
                                 <?php
                                 $G         = $Rrole['train_go'];
-                                $dataTable = $db->query("SELECT * FROM tb_member_c WHERE train_go='$G' ORDER BY id ASC", 0);
+                                $dataTable = $db->query("SELECT * FROM tb_member WHERE train_go='$G' ORDER BY id ASC", 0);
                                 if (mysqli_num_rows($dataTable) > 0) {
                                     $no = 0;
                                     while ($row = mysqli_fetch_array($dataTable)) {

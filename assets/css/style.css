@@ -656,7 +656,7 @@ body{
     line-height: 50px;
     padding: 0 50px;
     font-weight: 600;
-    color: #333333;
+    color: #fff;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
@@ -748,7 +748,7 @@ body{
     text-align: center;
     line-height: 50px;
     font-size: 20px;
-    color: #333333;
+    color: #fff;
 }
 .biolife-mobile-panels .biolife-close-btn,
 .biolife-panels-actions-wrap .biolife-close-btn{
@@ -4111,7 +4111,7 @@ body.open-overlay #overlay{
     left: -340px;
     bottom: 0;
     width: 290px;
-    background-color: #ffffff;
+    background-color: #00346e;
     z-index: 999;
     -webkit-box-shadow: 3px 5px 14px -3px rgba(0,0,0,0.11);
     -moz-box-shadow: 3px 5px 14px -3px rgba(0,0,0,0.11);
@@ -4138,7 +4138,7 @@ body.open-overlay #overlay{
     display: block;
     font-size: 16px;
     font-weight: 600;
-    color: #333333;
+    color: #fff;
     margin-bottom: 10px;
 }
 .mobile-block-global .glb-item ul{
@@ -14765,4 +14765,31 @@ body.open-quickview-block .biolife-quickview-block{
     color: #fff;
     border-radius: 5px;
     margin-top: 10px;
+}
+
+.header-profiles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    color: #003369;
+    padding: 0px 10px;
+    border-radius: 100%;
+    width: 45px;
+    height: 45px;
+    margin-bottom: 10px;
+}
+
+.btn-line-ok {
+    color: #fff;
+    background-color: transparent;
+    border-radius: 10px;
+    border: 2px solid #fff;
+}
+
+.btn-line-ok:hover {
+    color: #fff;
+    background-color: transparent;
+    border-radius: 10px;
+    border: 2px solid #fff;
 }

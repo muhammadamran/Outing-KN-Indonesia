@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.2.1"
+    "@fortawesome/fontawesome-free": "^6.2.1",
+    "markers-on-map": "^1.4.0"
   }
 }
