@@ -14812,6 +14812,19 @@ body.open-quickview-block .biolife-quickview-block{
     margin-bottom: 10px;
 }
 
+.header-profiles-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #003369;
+    color: #fff;
+    padding: 0px 10px;
+    border-radius: 100%;
+    width: 45px;
+    height: 45px;
+    margin-bottom: 10px;
+}
+
 .btn-line-ok {
     color: #fff;
     background-color: transparent;
@@ -14852,27 +14865,37 @@ body.open-quickview-block .biolife-quickview-block{
 
 .ori {
     width: 100%;
-    height: 100vh;
     background-color: #fff;
     transition: all 0.3s ease 0s;
     z-index: 100000;
     box-shadow: 1px -5px 19px 4px rgb(0 0 0 / 11%);
     overflow-x: hidden;
-    margin-top: -149px;
-    border-radius: 40px 40px 0px 0px;
+    margin-top: -144px;
+    border-radius: 60px 60px 0px 0px;
     margin-bottom: -100px;
+}
+
+.ori-dd {
+    background-color: #fff;
+    height: 210px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 100000;
+    border-radius: 60px 60px 60px 60px;
+    padding: 17px;
+    margin-top: -155px;
 }
 
 .ori-bg {
     margin: 10px;
-    /* background-color: #e91e63; */
-    background-image: url('../apps/bg.png');
+    background-image: url(../apps/bg.png);
     height: 194px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 100000;
-    border-radius: 40px 40px 40px 40px;
+    border-radius: 60px 60px 60px 60px;
     padding: 125px;
 }
 
