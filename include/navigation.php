@@ -129,7 +129,7 @@ if ($Rheader['role'] == 'admin') {
     </div>
 </div>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly" defer></script>
-<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script src="https://maps.googleapis.com/maps/api/js"></script>
 <script>
     function initialize() {
         var propertiPeta = {

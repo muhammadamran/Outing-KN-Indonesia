@@ -10018,11 +10018,14 @@ li.slick-current .slider-opt04__layout01 .buttons .btn{
     background-position: center top;
 }
 .biolife-banner__grid .media-contain.media-01{
-    background-image: url('../images/home-02/banner-grid-01.jpg');
+    background-image: url('../svg/team-build.svg');
     height: 750px;
 }
+.biolife-banner__grid .media-contain.media-02{
+    background-image: url('../svg/dinner-garden.svg');
+}
 .biolife-banner__grid .media-contain.media-03{
-    background-image: url('../images/home-02/banner-grid-03.jpg');
+    background-image: url('../svg/show-time.svg');
 }
 .biolife-banner__grid .media-contain.media-04{
     background-image: url('../images/home-02/banner-grid-04.jpg');
@@ -14865,19 +14868,23 @@ body.open-quickview-block .biolife-quickview-block{
 
 .ori {
     width: 100%;
-    background-color: #fff;
-    transition: all 0.3s ease 0s;
+    /* background-color: #fff; */
+    background-image: url(../apps/bg-kk-2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     z-index: 100000;
     box-shadow: 1px -5px 19px 4px rgb(0 0 0 / 11%);
     overflow-x: hidden;
     margin-top: -144px;
     border-radius: 60px 60px 0px 0px;
     margin-bottom: -100px;
+    /* height:100vh; */
 }
 
 .ori-dd {
     background-color: #fff;
-    height: 210px;
+    height: 220px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -14904,8 +14911,6 @@ body.open-quickview-block .biolife-quickview-block{
     background: -webkit-linear-gradient(to left, #fff, #fff);  
     width: 100%;
     height:100vh;
-    
-   
 }
 
 .circles{
