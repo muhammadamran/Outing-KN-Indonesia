@@ -12,7 +12,7 @@ if ($Rheader['role'] == 'admin') {
 <!--Footer For Mobile-->
 <div class="mobile-footer">
     <div class="mobile-footer-inner">
-        <div class="mobile-block block-minicart" id="IDMB-Menu">
+        <div class="mobile-block block-minicart">
             <a class="link-to-cart <?= $uriSegments[2] == 'index.php' || $uriSegments[2] == '#' || $uriSegments[2] == '' ? 'active' : '' ?>" href="index.php">
                 <span class="text">
                     <div style="font-size: 25px;margin-bottom: 5px;">
@@ -22,7 +22,7 @@ if ($Rheader['role'] == 'admin') {
                 </span>
             </a>
         </div>
-        <div class="mobile-block block-minicart" id="IDMB-Menu" style="display: <?= $showS; ?>;">
+        <div class="mobile-block block-minicart" style="display: <?= $showS; ?>;">
             <a class="link-to-cart <?= $uriSegments[2] == 'train.php' ? 'active' : '' ?>" href="train.php">
                 <span class="text">
                     <div style="font-size: 25px;margin-bottom: 5px;">
@@ -32,17 +32,48 @@ if ($Rheader['role'] == 'admin') {
                 </span>
             </a>
         </div>
-        <div class="mobile-block block-minicart" id="IDMB-Menu">
+        <!-- <div class="mobile-block block-minicart" style="display: <?= $showS; ?>;">
+            <a class="link-to-cart <?= $uriSegments[2] == 'bus.php' ? 'active' : '' ?>" href="bus.php">
+                <span class="text">
+                    <div style="font-size: 25px;margin-bottom: 5px;">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    Bus
+                </span>
+            </a>
+        </div> -->
+        <!-- <div class="mobile-block block-minicart">
+            <a class="link-to-cart <?= $uriSegments[2] == 'talent.php' ? 'active' : '' ?>" href="talent.php">
+                <span class="text">
+                    <div style="font-size: 25px;margin-bottom: 5px;">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    Talent
+                </span>
+            </a>
+        </div> -->
+        <div class="mobile-block block-minicart">
             <a class="link-to-cart <?= $uriSegments[2] == 'voting.php' ? 'active' : '' ?>" href="voting.php">
                 <span class="text">
                     <div style="font-size: 25px;margin-bottom: 5px;">
                         <i class="fas fa-star-half-alt"></i>
+                        <!-- ✨ -->
                     </div>
                     Voting
                 </span>
             </a>
         </div>
-        <div class="mobile-block block-minicart" id="IDMB-Menu">
+        <!-- <div class="mobile-block block-minicart" style="display: <?= $showS; ?>;">
+            <a class="link-to-cart <?= $uriSegments[2] == 'member.php' ? 'active' : '' ?>" href="member.php">
+                <span class="text">
+                    <div style="font-size: 25px;margin-bottom: 5px;">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    Member
+                </span>
+            </a>
+        </div> -->
+        <div class="mobile-block block-minicart">
             <a class="menu-bar myaccount-toggle btn-toggle" data-object="global-panel-opened" href="javascript:void(0)">
                 <span class="text">
                     <div style="font-size: 25px;margin-bottom: 5px;">

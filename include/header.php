@@ -1,5 +1,5 @@
 <!-- HEADER -->
-<header id="header" class="header-area style-01 layout-04" style="background: #00346e;">
+<header id="header" class="header-area style-01 layout-04" style="background: linear-gradient(45deg, #18487e, #00346e, #18487e);border-radius: 0;">
     <div class="header-middle biolife-sticky-object ">
         <div class="container">
             <div class="row">

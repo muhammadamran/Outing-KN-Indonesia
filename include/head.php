@@ -151,7 +151,7 @@ function NPWP($value)
     <!-- Preloader -->
     <div id="biof-loading">
         <div class="biof-loading-center">
-            <div style="position: absolute;left: 50%;top: 53%;width: 400px;margin-top: -100px;margin-left: -190px;">
+            <div style="position: absolute;left: 50%;top: 53%;width: 255px;margin-top: -60px;margin-left: -125px;">
                 <img src="assets/apps/outing.png" width="100%">
             </div>
             <div class="biof-loading-center-absolute">
