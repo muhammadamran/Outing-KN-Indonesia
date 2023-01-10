@@ -41,14 +41,14 @@ if (isset($_POST["add_"])) {
     <!-- Main content -->
     <div id="main-content" class="main-content">
         <!-- Page -->
-        <div class="hero-section hero-background-talent style-02" style="margin-top: 49px;">
+        <!-- <div class="hero-section hero-background-talent style-02" style="margin-top: 49px;">
             <h1 class="page-title">Talent</h1>
             <nav class="biolife-nav">
                 <ul style="text-transform: uppercase;">
                     <li class="nav-item"><span class="current-page">Time: <font id="clock"> </font></span></li>
                 </ul>
             </nav>
-        </div>
+        </div> -->
         <!-- End Page -->
 
         <div class="product-related-box single-layout">

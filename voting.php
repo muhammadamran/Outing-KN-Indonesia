@@ -4,20 +4,24 @@
 <?php include "include/header.php"; ?>
 <title>Voting | Kuehne+Nagel Indonesia - BDG Gathering</title>
 <div class="page-contain">
-    <!-- Main content -->
-    <div id="main-content" class="main-content">
-        <!-- Page -->
-        <div class="hero-section hero-background-voting style-02" style="margin-top: 49px;">
-            <h1 class="page-title">Voting</h1>
-            <nav class="biolife-nav">
-                <ul style="text-transform: uppercase;">
-                    <li class="nav-item"><span class="current-page">Voters: <?= $Rrole['fullname']; ?></span></li>
-                    <li class="nav-item"><span class="current-page">Time: <font id="clock"> </font></span></li>
-                </ul>
-            </nav>
-        </div>
-        <!-- End Page -->
+    <div class="ori-judul" style="background-image: url(assets/images/bgbegin.png);background-position: center;background-repeat: no-repeat;background-size: cover;">
+        <!-- Main content -->
+        <div id="main-content" class="main-content">
 
+            <div class="product-related-box single-layout">
+                <div class="biolife-title-box lg-margin-bottom-26px-im" style="margin-top: -45px;margin-bottom: -30px;">
+                    <div>
+                        <img src="assets/icon/star.png" alt="Train">
+                    </div>
+                    <span class="subtitle">Voting</span>
+                </div>
+            </div>
+
+            <div class="testimonial-block">
+                <div class="container">
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <?php
