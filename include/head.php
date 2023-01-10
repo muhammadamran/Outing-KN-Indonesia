@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="assets/css/slick.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/main-color04.css">
+    <!-- Outing CSS -->
+    <link rel="stylesheet" href="assets/css/outing.css">
     <!-- Font Poppins -->
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -144,6 +146,55 @@ function NPWP($value)
     // 12.345.678.9-012.345
     $hasil = number_format($value, 0, ',', '.');
     return $hasil;
+}
+
+
+$userInfo   = $_SESSION['username'];
+$usIn       = $db->query("SELECT * FROM tb_member WHERE username='$userInfo' ");
+$RusIn      = mysqli_fetch_array($usIn);
+
+$waktu = gmdate("H:i", time() + 7 * 3600);
+$t = explode(":", $waktu);
+$jam = $t[0];
+$menit = $t[1];
+
+if ($jam >= 00 and $jam < 10) {
+    if ($menit > 00 and $menit < 60) {
+        $ucapan = "Good morning, ";
+        $icon = "<i class='fas fa-cloud-sun'></i>";
+    }
+} else if ($jam >= 10 and $jam < 15) {
+    if ($menit > 00 and $menit < 60) {
+        $ucapan = "Good afternoon, ";
+        $icon = "<i class='fas fa-sun'></i>";
+    }
+} else if ($jam >= 15 and $jam < 18) {
+    if ($menit > 00 and $menit < 60) {
+        $ucapan = "Good afternoon, ";
+        $icon = "<i class='fas fa-cloud-sun'></i>";
+    }
+} else if ($jam >= 18 and $jam <= 24) {
+    if ($menit > 00 and $menit < 60) {
+        $ucapan = "Good evening, ";
+        $icon = "<i class='fas fa-cloud-moon'></i>";
+    }
+} else {
+    $icon = "Error";
+    $ucapan = "Error";
+}
+
+$myString = $_SESSION['username'];
+if (strstr($myString, '.')) {
+    $FL    = explode('.', $myString);
+    $F     = $FL[0];
+    $L     = $FL[1];
+    $showU = substr($F, 0, 1) . "" . substr($L, 0, 1);
+    $showD = "<font style='text-transform: capitalize;'>$L</font>, <font style='text-transform: capitalize;'>$F</font> / Kuehne + Nagel";
+} else {
+    $F     = $myString;
+    $L     = $myString;
+    $showU = substr($myString, 0, 1) . "" . substr($myString, 0, 1);
+    $showD = "<font style='text-transform: capitalize;'>$L</font>, <font style='text-transform: capitalize;'>$F</font> / Kuehne + Nagel";
 }
 ?>
 
