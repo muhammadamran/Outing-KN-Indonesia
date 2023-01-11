@@ -23,7 +23,7 @@
             <!-- End Users -->
         </div>
         <!-- Welcome -->
-        <div style="margin-top: 215px;">
+        <div style="margin-top: 150px;">
             <div style="display: grid;justify-content:center;margin-top: -40px;">
                 <font style="font-size: 35px;font-weight: 900;color: #fff;text-shadow: 0 0 2px #fff;">Welcome</font>
             </div>
