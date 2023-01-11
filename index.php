@@ -59,38 +59,78 @@
             </div>
             <div style="display: flex;justify-content: space-between;align-items: center;margin-top: -25px;">
                 <!-- Train Location -->
-                <div style="padding: 10px;background: #fff;margin: 15px;border-radius: 10px;box-shadow: 2px 2px 3px 3px rgb(219 219 219);">
-                    <img src="assets/menu/train-station.png" alt="Train Location" style="width: 495px;">
+                <div>
+                    <div style="padding: 10px;background: #fff;margin: 15px;border-radius: 10px;box-shadow: 2px 2px 3px 3px rgb(219 219 219);">
+                        <img src="assets/menu/train-station.png" alt="Train Location" style="width: 495px;">
+                    </div>
+                    <div style="display: flex;justify-content: center;margin-top: -15px;">
+                        <font style="font-size: 10px;font-weight: 400;color: #00346e;">Train Location</font>
+                    </div>
                 </div>
                 <!-- Hotel Location -->
-                <div style="padding: 10px;background: #fff;margin: 15px;border-radius: 10px;box-shadow: 2px 2px 3px 3px rgb(219 219 219);">
-                    <img src="assets/menu/hotel.png" alt="Hotel Location" style="width: 485px;">
+                <div>
+                    <div style="padding: 10px;background: #fff;margin: 15px;border-radius: 10px;box-shadow: 2px 2px 3px 3px rgb(219 219 219);">
+                        <img src="assets/menu/hotel.png" alt="Hotel Location" style="width: 485px;">
+                    </div>
+                    <div style="display: flex;justify-content: center;margin-top: -15px;">
+                        <font style="font-size: 10px;font-weight: 400;color: #00346e;">Hotel Location</font>
+                    </div>
                 </div>
                 <!-- News -->
-                <div style="padding: 10px;background: #fff;margin: 15px;border-radius: 10px;box-shadow: 2px 2px 3px 3px rgb(219 219 219);">
-                    <img src="assets/menu/broadcast.png" alt="News" style="width: 485px;">
+                <div>
+                    <div style="padding: 10px;background: #fff;margin: 15px;border-radius: 10px;box-shadow: 2px 2px 3px 3px rgb(219 219 219);">
+                        <img src="assets/menu/broadcast.png" alt="News" style="width: 485px;">
+                    </div>
+                    <div style="display: flex;justify-content: center;margin-top: -15px;">
+                        <font style="font-size: 10px;font-weight: 400;color: #00346e;">News</font>
+                    </div>
                 </div>
                 <!-- Galery -->
-                <div style="padding: 10px;background: #fff;margin: 15px;border-radius: 10px;box-shadow: 2px 2px 3px 3px rgb(219 219 219);">
-                    <img src="assets/menu/picture.png" alt="Galery" style="width: 485px;">
+                <div>
+                    <div style="padding: 10px;background: #fff;margin: 15px;border-radius: 10px;box-shadow: 2px 2px 3px 3px rgb(219 219 219);">
+                        <img src="assets/menu/picture.png" alt="Galery" style="width: 485px;">
+                    </div>
+                    <div style="display: flex;justify-content: center;margin-top: -15px;">
+                        <font style="font-size: 10px;font-weight: 400;color: #00346e;">Gallery</font>
+                    </div>
                 </div>
             </div>
             <div style="display: flex;justify-content: space-between;align-items: center;margin-top: -7px;">
-                <!-- News -->
-                <div style="padding: 15px;background: #fff;margin: 15px;border-radius: 10px;box-shadow: 2px 2px 3px 3px rgb(219 219 219);">
-                    <img src="assets/3d/video-camera-dynamic-premium.png" alt="News">
+                <!-- Schedule -->
+                <div>
+                    <div style="padding: 10px;background: #fff;margin: 15px;border-radius: 10px;box-shadow: 2px 2px 3px 3px rgb(219 219 219);">
+                        <img src="assets/menu/event.png" alt="Schedule" style="width: 495px;">
+                    </div>
+                    <div style="display: flex;justify-content: center;margin-top: -15px;">
+                        <font style="font-size: 10px;font-weight: 400;color: #00346e;">Schedule</font>
+                    </div>
                 </div>
-                <!-- Train Location -->
-                <div style="padding: 15px;background: #fff;margin: 15px;border-radius: 10px;box-shadow: 2px 2px 3px 3px rgb(219 219 219);">
-                    <img src="assets/3d/puzzle-dynamic-premium.png" alt="Train Location">
+                <!-- Vote -->
+                <div>
+                    <div style="padding: 10px;background: #fff;margin: 15px;border-radius: 10px;box-shadow: 2px 2px 3px 3px rgb(219 219 219);">
+                        <img src="assets/menu/starred.png" alt="Vote" style="width: 485px;">
+                    </div>
+                    <div style="display: flex;justify-content: center;margin-top: -15px;">
+                        <font style="font-size: 10px;font-weight: 400;color: #00346e;">Vote</font>
+                    </div>
                 </div>
-                <!-- Hotel Location -->
-                <div style="padding: 15px;background: #fff;margin: 15px;border-radius: 10px;box-shadow: 2px 2px 3px 3px rgb(219 219 219);">
-                    <img src="assets/3d/video-camera-dynamic-premium.png" alt="Hotel Location">
+                <!-- Champions -->
+                <div>
+                    <div style="padding: 10px;background: #fff;margin: 15px;border-radius: 10px;box-shadow: 2px 2px 3px 3px rgb(219 219 219);">
+                        <img src="assets/menu/successful.png" alt="Champions" style="width: 485px;">
+                    </div>
+                    <div style="display: flex;justify-content: center;margin-top: -15px;">
+                        <font style="font-size: 10px;font-weight: 400;color: #00346e;">Awards</font>
+                    </div>
                 </div>
-                <!-- Galery -->
-                <div style="padding: 15px;background: #fff;margin: 15px;border-radius: 10px;box-shadow: 2px 2px 3px 3px rgb(219 219 219);">
-                    <img src="assets/3d/star-dynamic-premium.png" alt="Galery">
+                <!-- All Users -->
+                <div>
+                    <div style="padding: 10px;background: #fff;margin: 15px;border-radius: 10px;box-shadow: 2px 2px 3px 3px rgb(219 219 219);">
+                        <img src="assets/menu/view.png" alt="All Users" style="width: 485px;">
+                    </div>
+                    <div style="display: flex;justify-content: center;margin-top: -15px;">
+                        <font style="font-size: 10px;font-weight: 400;color: #00346e;">All Users</font>
+                    </div>
                 </div>
             </div>
         </div>
