@@ -1,31 +1,36 @@
 <?php include "include/db.php"; ?>
 <?php include "include/restrict.php"; ?>
 <?php include "include/head.php"; ?>
-<?php include "include/header.php"; ?>
-<title>Voting | Kuehne+Nagel Indonesia - BDG Gathering</title>
-<div class="page-contain">
-    <div class="ori-judul" style="background-image: url(assets/images/bgbegin.png);background-position: center;background-repeat: no-repeat;background-size: cover;">
-        <!-- Main content -->
-        <div id="main-content" class="main-content">
-
-            <div class="product-related-box single-layout">
-                <div class="biolife-title-box lg-margin-bottom-26px-im" style="margin-top: -45px;margin-bottom: -30px;">
-                    <div>
-                        <img src="assets/icon/star.png" alt="Train">
-                    </div>
-                    <span class="subtitle">Voting</span>
+<title>Vote | Kuehne+Nagel Indonesia - BDG Gathering</title>
+<div class="page-contain" id="page-v">
+    <div id="main-content" class="main-content">
+        <div class="container">
+            <div style="display: flex;margin-top: 10px;justify-content: space-between;">
+                <div>
+                    <a href="#" onclick="history.back()">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </a>
+                </div>
+                <div style="margin-left: -42px;font-size: 20px;font-weight: 900;color: #000;">Vote</div>
+                <div></div>
+            </div>
+            <div style="display: flex;justify-content: center;align-items: center;">
+                <div class="icon-ok">
+                    <img src="assets/3d/trophy-dynamic-premium.png" alt="Vote" style="width: 700px;">
                 </div>
             </div>
-
-            <div class="testimonial-block">
-                <div class="container">
+            <div style="display: flex;justify-content: space-between;align-items: center;margin-top: 203px;">
+                <div>
+                    <h1 style="color: #000;font-weight: 600;">Let's be given a star</h1>
+                </div>
+                <div>
+                    <a href="" class="btn-ll">
+                        <i class="fas fa-long-arrow-alt-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<?php
-include "include/footer.php";
-?>
 <?php include "include/navigation.php"; ?>
 <?php include "include/jsparty.php"; ?>

@@ -54,3 +54,39 @@
     margin-top: 150px;
     border-radius: 45px 45px 0px 0px;
 }
+
+.lingkaran1{
+	width: 200px;
+	height: 200px;
+	background: #003369;
+	border-radius: 100%;
+}
+
+.mid {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 90px;
+}
+
+.icon-ok {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #003369;
+    padding: 10px;
+    border-radius: 100%;
+    width: 217px;
+    height: 217px;
+    margin-top: 76px;
+}
+
+.btn-ll {
+    background: #000;
+    padding: 13px;
+    color: #fff;
+    
+    border-radius: 100%;
+    width: 217px;
+    height: 217px;
+}
