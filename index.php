@@ -145,7 +145,7 @@
                 <?php } ?>
             </div>
             <?php if ($Rrole['role'] == 'admin') { ?>
-                <div style="display: flex;justify-content: center;align-items: center;margin: 123px;margin-top: -8px;">
+                <div style="display: flex;justify-content: center;align-items: center;margin: 141px;margin-top: -2px;">
                     <!-- Logout -->
                     <a href="logout.php">
                         <div style="padding: 10px;background: #fff;margin: 15px;border-radius: 10px;box-shadow: 2px 2px 3px 3px rgb(219 219 219);">

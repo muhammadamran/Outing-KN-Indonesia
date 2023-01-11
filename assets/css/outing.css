@@ -55,6 +55,18 @@
     border-radius: 45px 45px 0px 0px;
 }
 
+.list-menu-m-vote {
+    background-color: #003369;
+    height: 648px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 100000;
+    padding: 17px;
+    margin-top: 5px;
+    border-radius: 45px 45px 0px 0px;
+}
+
 .lingkaran1{
 	width: 200px;
 	height: 200px;
@@ -89,4 +101,75 @@
     border-radius: 100%;
     width: 217px;
     height: 217px;
+}
+
+.btn-get {
+    color: #fff;
+    background: linear-gradient(45deg, #00346e, #00346e);
+    border-color: #00346e;
+    padding: 13px;
+    border-radius: 35px;
+}
+
+.btn-get:hover {
+    color: #fff;
+    background: linear-gradient(45deg, #00346e, #00346e);
+    border-color: #00346e;
+    padding: 13px;
+    border-radius: 35px;
+}
+
+div#page-v {
+    background: #00346e;
+    height: 265px;
+    border-radius: 0px 0px 50px 50px;
+}
+
+.icon-ok-ok {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #003369;
+    padding: 10px;
+    border-radius: 100%;
+    width: 217px;
+    height: 217px;
+    margin-top: 76px;
+    border: solid #fff;
+}
+
+/* Star */
+.o-star {
+    background: -webkit-linear-gradient(#cd8e32, #ffc107,#cd8e32, #ffc107,#ffc107);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #3d20044a;
+}
+
+.btn-vote {
+    color: #fff;
+    background: linear-gradient(45deg, #f3e36b, #5b5f71);
+    padding: 13px;
+    border-radius: 35px;
+    border-color: #00346e;
+}
+
+.btn-vote:hover {
+    color: #fff;
+    background: linear-gradient(45deg, #f3e36b, #5b5f71);
+    padding: 13px;
+    border-radius: 35px;
+    border-color: #00346e;
+}
+
+.icon-ok-ok-ok {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #003369;
+    padding: 10px;
+    border-radius: 100%;
+    width: 217px;
+    height: 217px;
+    margin-top: 12px;
+    border: solid #fff;
 }
