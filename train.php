@@ -47,7 +47,7 @@ if (isset($_GET["cencel"])) {
 ?>
 <title>Train G-<?= $Rrole['train_go']; ?> | Kuehne+Nagel Indonesia - BDG Gathering</title>
 <div class="page-contain">
-    <div class="ori-judul" style="background-image: url(assets/images/bgbegin.png);background-position: center;background-repeat: no-repeat;background-size: cover;">
+    <div class="ori-judul">
         <!-- Main content -->
         <div id="main-content" class="main-content">
 
@@ -66,88 +66,93 @@ if (isset($_GET["cencel"])) {
             <div class="testimonial-block">
                 <div class="container">
                     <form action="" id="form-submit" method="POST">
-                        <div class="page-divider"></div>
-                        <div style="display: flex;justify-content: flex-start;align-items: center;margin-bottom: 10px;">
-                            <button class=" btn btn-sm btn-primary" id="btn-checkin-yes" style="margin-left: 10px;"><i class="fas fa-user-check"></i> Check In</button>
-                            <button class="btn btn-sm btn-green" id="btn-checkin-cencel" style="margin-left: 10px;"><i class="fas fa-user-times"></i> Cencel Check In</button>
-                        </div>
-                        <div class="page-divider"></div>
-                        <div style="margin-top: -15px;margin-bottom: 10px;">
-                            <!-- alert -->
-                            <div style="padding: 10px;">
-                                <?php if (isset($_GET['Success'])) { ?>
-                                    <!-- Success -->
-                                    <div class="alert-success">
-                                        <div style="display: flex;justify-content: center;align-items: center;">
-                                            <div>
-                                                <i class="fas fa-user-check" style="font-size: 40px;"></i>
-                                            </div>
-                                            <div style="margin-left: 5px;">
-                                                <strong> Check In Success!</strong>
-                                            </div>
-                                        </div>
-                                        <span class="closebtn" onclick="this.parentElement.style.display='none';" style="margin-top: -45px;margin-right: 0px;">&times;</span>
-                                    </div>
-                                    <!-- End Success -->
-                                <?php } ?>
-                                <?php if (isset($_GET['Failed'])) { ?>
-                                    <!-- Failed -->
-                                    <div class="alert-failed">
-                                        <div style="display: flex;justify-content: center;align-items: center;">
-                                            <div>
-                                                <i class="fas fa-user-check" style="font-size: 40px;"></i>
-                                            </div>
-                                            <div style="margin-left: 5px;">
-                                                <strong> Check In Failed!</strong>
-                                            </div>
-                                        </div>
-                                        <span class="closebtn" onclick="this.parentElement.style.display='none';" style="margin-top: -45px;margin-right: 0px;">&times;</span>
-                                    </div>
-                                    <!-- End Failed -->
-                                <?php } ?>
-                                <?php if (isset($_GET['SuccessC'])) { ?>
-                                    <!-- SuccessC -->
-                                    <div class="alert-success-c">
-                                        <div style="display: flex;justify-content: center;align-items: center;">
-                                            <div>
-                                                <i class="fas fa-user-check" style="font-size: 40px;"></i>
-                                            </div>
-                                            <div style="margin-left: 5px;">
-                                                <strong> Check In Cencel!</strong>
-                                            </div>
-                                        </div>
-                                        <span class="closebtn" onclick="this.parentElement.style.display='none';" style="margin-top: -45px;margin-right: 0px;">&times;</span>
-                                    </div>
-                                    <!-- End SuccessC -->
-                                <?php } ?>
-                                <?php if (isset($_GET['FailedC'])) { ?>
-                                    <!-- FailedC -->
-                                    <div class="alert-failed-c">
-                                        <div style="display: flex;justify-content: center;align-items: center;">
-                                            <div>
-                                                <i class="fas fa-user-check" style="font-size: 40px;"></i>
-                                            </div>
-                                            <div style="margin-left: 5px;">
-                                                <strong> Check In Cencel Failed!</strong>
-                                            </div>
-                                        </div>
-                                        <span class="closebtn" onclick="this.parentElement.style.display='none';" style="margin-top: -45px;margin-right: 0px;">&times;</span>
-                                    </div>
-                                    <!-- End FailedC -->
-                                <?php } ?>
+                        <?php if ($Rrole['role'] == 'admin') { ?>
+                            <div class="page-divider"></div>
+                            <div style="display: flex;justify-content: flex-start;align-items: center;margin-bottom: 10px;">
+                                <button class=" btn btn-sm btn-primary" id="btn-checkin-yes" style="margin-left: 10px;"><i class="fas fa-user-check"></i> Check In</button>
+                                <button class="btn btn-sm btn-green" id="btn-checkin-cencel" style="margin-left: 10px;"><i class="fas fa-user-times"></i> Cencel</button>
+                                <a href="train_data.php" class="btn btn-sm btn-info" id="btn-download" style="margin-left: 10px;"><i class="far fa-file-excel"></i> Download</a>
                             </div>
-                            <!-- end alert -->
-                        </div>
+                            <div class="page-divider"></div>
+                            <div style="margin-top: -15px;margin-bottom: 10px;">
+                                <!-- alert -->
+                                <div style="padding: 10px;">
+                                    <?php if (isset($_GET['Success'])) { ?>
+                                        <!-- Success -->
+                                        <div class="alert-success">
+                                            <div style="display: flex;justify-content: center;align-items: center;">
+                                                <div>
+                                                    <i class="fas fa-user-check" style="font-size: 40px;"></i>
+                                                </div>
+                                                <div style="margin-left: 5px;">
+                                                    <strong> Check In Success!</strong>
+                                                </div>
+                                            </div>
+                                            <span class="closebtn" onclick="this.parentElement.style.display='none';" style="margin-top: -45px;margin-right: 0px;">&times;</span>
+                                        </div>
+                                        <!-- End Success -->
+                                    <?php } ?>
+                                    <?php if (isset($_GET['Failed'])) { ?>
+                                        <!-- Failed -->
+                                        <div class="alert-failed">
+                                            <div style="display: flex;justify-content: center;align-items: center;">
+                                                <div>
+                                                    <i class="fas fa-user-check" style="font-size: 40px;"></i>
+                                                </div>
+                                                <div style="margin-left: 5px;">
+                                                    <strong> Check In Failed!</strong>
+                                                </div>
+                                            </div>
+                                            <span class="closebtn" onclick="this.parentElement.style.display='none';" style="margin-top: -45px;margin-right: 0px;">&times;</span>
+                                        </div>
+                                        <!-- End Failed -->
+                                    <?php } ?>
+                                    <?php if (isset($_GET['SuccessC'])) { ?>
+                                        <!-- SuccessC -->
+                                        <div class="alert-success-c">
+                                            <div style="display: flex;justify-content: center;align-items: center;">
+                                                <div>
+                                                    <i class="fas fa-user-check" style="font-size: 40px;"></i>
+                                                </div>
+                                                <div style="margin-left: 5px;">
+                                                    <strong> Check In Cencel!</strong>
+                                                </div>
+                                            </div>
+                                            <span class="closebtn" onclick="this.parentElement.style.display='none';" style="margin-top: -45px;margin-right: 0px;">&times;</span>
+                                        </div>
+                                        <!-- End SuccessC -->
+                                    <?php } ?>
+                                    <?php if (isset($_GET['FailedC'])) { ?>
+                                        <!-- FailedC -->
+                                        <div class="alert-failed-c">
+                                            <div style="display: flex;justify-content: center;align-items: center;">
+                                                <div>
+                                                    <i class="fas fa-user-check" style="font-size: 40px;"></i>
+                                                </div>
+                                                <div style="margin-left: 5px;">
+                                                    <strong> Check In Cencel Failed!</strong>
+                                                </div>
+                                            </div>
+                                            <span class="closebtn" onclick="this.parentElement.style.display='none';" style="margin-top: -45px;margin-right: 0px;">&times;</span>
+                                        </div>
+                                        <!-- End FailedC -->
+                                    <?php } ?>
+                                </div>
+                                <!-- end alert -->
+                            </div>
+                        <?php } ?>
                         <div class="table-responsive">
                             <table id="C_TableDefault" class="table table-bordered first">
                                 <thead>
                                     <tr>
                                         <!-- <th style="width: 5px;">#</th> -->
-                                        <th style="width: 5px;" class="no-sort">
-                                            <button type="button" class="btn btn-sm btn-primary" id="chk_new" onclick="checkAll('chk');">
-                                                <i class="fas fa-check-square"></i>
-                                            </button>
-                                        </th>
+                                        <?php if ($Rrole['role'] == 'admin') { ?>
+                                            <th style="width: 5px;" class="no-sort">
+                                                <button type="button" class="btn btn-sm btn-primary" id="chk_new" onclick="checkAll('chk');">
+                                                    <i class="fas fa-check-square"></i>
+                                                </button>
+                                            </th>
+                                        <?php } ?>
                                         <th style="text-align: center;font-size: 12px;font-weight: bold;" class="no-sort">Name<font style="color:transparent">.</font>&<font style="color:transparent">.</font>Details</th>
                                         <th style="text-align: center;font-size: 12px;font-weight: bold;" class="no-sort">Boarding<font style="color:transparent">.</font>Status </th>
                                     </tr>
@@ -155,7 +160,7 @@ if (isset($_GET["cencel"])) {
                                 <tbody>
                                     <?php
                                     $G         = $Rrole['train_go'];
-                                    $dataTable = $db->query("SELECT * FROM tb_member WHERE train_go='$G' ORDER BY id ASC, train_go_sheet_n ASC, train_go_sheet_c ASC", 0);
+                                    $dataTable = $db->query("SELECT * FROM tb_member WHERE train_go='$G' ORDER BY train_go_sheet_n ASC, train_go_sheet_c ASC", 0);
                                     if (mysqli_num_rows($dataTable) > 0) {
                                         $no = 0;
                                         while ($row = mysqli_fetch_array($dataTable)) {
@@ -176,12 +181,14 @@ if (isset($_GET["cencel"])) {
                                             }
                                     ?>
                                             <tr <?= $bg ?>>
-                                                <td style="width: 5px;">
-                                                    <div style="margin-top: 15px;">
-                                                        <input type="checkbox" id="chk" name="train[]" value="<?= $row['id'] ?>">
-                                                    </div>
-                                                </td>
-                                                <!-- Hostname & Username -->
+                                                <?php if ($Rrole['role'] == 'admin') { ?>
+                                                    <td style="width: 5px;">
+                                                        <div style="margin-top: 15px;">
+                                                            <input type="checkbox" id="chk" name="train[]" value="<?= $row['id'] ?>">
+                                                        </div>
+                                                    </td>
+                                                <?php } ?>
+                                                <!-- Nama & Details -->
                                                 <td>
                                                     <div style="display: flex;justify-content:flex-start;align-items: center;">
                                                         <div class="<?= $class ?>">

@@ -122,16 +122,41 @@
                         <font style="font-size: 10px;font-weight: 400;color: #00346e;">Awards</font>
                     </div>
                 </a>
-                <!-- All Users -->
-                <a href="train.php">
-                    <div style="padding: 10px;background: #fff;margin: 15px;border-radius: 10px;box-shadow: 2px 2px 3px 3px rgb(219 219 219);">
-                        <img src="assets/menu/view.png" alt="All Users" style="width: 485px;">
-                    </div>
-                    <div style="display: flex;justify-content: center;margin-top: -15px;">
-                        <font style="font-size: 10px;font-weight: 400;color: #00346e;">All Users</font>
-                    </div>
-                </a>
+                <?php if ($Rrole['role'] == 'admin') { ?>
+                    <!-- Master Data -->
+                    <a href="train.php">
+                        <div style="padding: 10px;background: #fff;margin: 15px;border-radius: 10px;box-shadow: 2px 2px 3px 3px rgb(219 219 219);">
+                            <img src="assets/menu/master-data.png" alt="Master Data" style="width: 485px;">
+                        </div>
+                        <div style="display: flex;justify-content: center;margin-top: -15px;">
+                            <font style="font-size: 10px;font-weight: 400;color: #00346e;">Master Data</font>
+                        </div>
+                    </a>
+                <?php } else { ?>
+                    <!-- Logout -->
+                    <a href="logout.php">
+                        <div style="padding: 10px;background: #fff;margin: 15px;border-radius: 10px;box-shadow: 2px 2px 3px 3px rgb(219 219 219);">
+                            <img src="assets/menu/check-out.png" alt="Logout" style="width: 485px;">
+                        </div>
+                        <div style="display: flex;justify-content: center;margin-top: -15px;">
+                            <font style="font-size: 10px;font-weight: 400;color: #00346e;">Logout</font>
+                        </div>
+                    </a>
+                <?php } ?>
             </div>
+            <?php if ($Rrole['role'] == 'admin') { ?>
+                <div style="display: flex;justify-content: center;align-items: center;margin: 123px;margin-top: -8px;">
+                    <!-- Logout -->
+                    <a href="logout.php">
+                        <div style="padding: 10px;background: #fff;margin: 15px;border-radius: 10px;box-shadow: 2px 2px 3px 3px rgb(219 219 219);">
+                            <img src="assets/menu/check-out.png" alt="Logout" style="width: 485px;">
+                        </div>
+                        <div style="display: flex;justify-content: center;margin-top: -15px;">
+                            <font style="font-size: 10px;font-weight: 400;color: #00346e;">Logout</font>
+                        </div>
+                    </a>
+                </div>
+            <?php } ?>
         </div>
         <!-- End List Menu -->
     </div>
