@@ -22,7 +22,7 @@ if ($Rheader['role'] == 'admin') {
                 </span>
             </a>
         </div>
-        <div class="mobile-block block-minicart" id="IDMB-Menu" style="display: <?= $showS; ?>;">
+        <!-- <div class="mobile-block block-minicart" id="IDMB-Menu" style="display: <?= $showS; ?>;">
             <a class="link-to-cart <?= $uriSegments[2] == 'train.php' ? 'active' : '' ?>" href="train.php">
                 <span class="text">
                     <div style="font-size: 25px;margin-bottom: 5px;">
@@ -31,8 +31,8 @@ if ($Rheader['role'] == 'admin') {
                     Train
                 </span>
             </a>
-        </div>
-        <div class="mobile-block block-minicart" id="IDMB-Menu">
+        </div> -->
+        <!-- <div class="mobile-block block-minicart" id="IDMB-Menu">
             <a class="link-to-cart <?= $uriSegments[2] == 'voting.php' ? 'active' : '' ?>" href="voting.php">
                 <span class="text">
                     <div style="font-size: 25px;margin-bottom: 5px;">
@@ -41,8 +41,8 @@ if ($Rheader['role'] == 'admin') {
                     Voting
                 </span>
             </a>
-        </div>
-        <div class="mobile-block block-minicart" id="IDMB-Menu">
+        </div> -->
+        <!-- <div class="mobile-block block-minicart" id="IDMB-Menu">
             <a class="menu-bar myaccount-toggle btn-toggle" data-object="global-panel-opened" href="javascript:void(0)">
                 <span class="text">
                     <div style="font-size: 25px;margin-bottom: 5px;">
@@ -51,7 +51,7 @@ if ($Rheader['role'] == 'admin') {
                     <font style="text-transform: uppercase;">Account</font>
                 </span>
             </a>
-        </div>
+        </div> -->
     </div>
 </div>
 

@@ -155,7 +155,7 @@ if (isset($_GET["cencel"])) {
                                 <tbody>
                                     <?php
                                     $G         = $Rrole['train_go'];
-                                    $dataTable = $db->query("SELECT * FROM tb_member WHERE train_go='$G' ORDER BY id ASC", 0);
+                                    $dataTable = $db->query("SELECT * FROM tb_member WHERE train_go='$G' ORDER BY id ASC, train_go_sheet_n ASC, train_go_sheet_c ASC", 0);
                                     if (mysqli_num_rows($dataTable) > 0) {
                                         $no = 0;
                                         while ($row = mysqli_fetch_array($dataTable)) {

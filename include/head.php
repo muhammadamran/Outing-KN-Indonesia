@@ -161,22 +161,26 @@ $menit = $t[1];
 if ($jam >= 00 and $jam < 10) {
     if ($menit > 00 and $menit < 60) {
         $ucapan = "Good morning, ";
-        $icon = "<i class='fas fa-cloud-sun'></i>";
+        $icon = "<img src='assets/3d/morning.jpg' alt='Morning' style='width: 55px;'>";
+        // $icon = "<i class='fas fa-sun'></i>";
     }
 } else if ($jam >= 10 and $jam < 15) {
     if ($menit > 00 and $menit < 60) {
         $ucapan = "Good afternoon, ";
-        $icon = "<i class='fas fa-sun'></i>";
+        $icon = "<img src='assets/3d/afternoon.jpg' alt='afternoon' style='width: 55px;'>";
+        // $icon = "<i class='fas fa-sun'></i>";
     }
 } else if ($jam >= 15 and $jam < 18) {
     if ($menit > 00 and $menit < 60) {
         $ucapan = "Good afternoon, ";
-        $icon = "<i class='fas fa-cloud-sun'></i>";
+        $icon = "<img src='assets/3d/afternoon.jpg' alt='afternoon' style='width: 55px;'>";
+        // $icon = "<i class='fas fa-cloud-sun'></i>";
     }
 } else if ($jam >= 18 and $jam <= 24) {
     if ($menit > 00 and $menit < 60) {
         $ucapan = "Good evening, ";
-        $icon = "<i class='fas fa-cloud-moon'></i>";
+        $icon = "<img src='assets/3d/evening.jpg' alt='evening' style='width: 55px;'>";
+        // $icon = "<i class='fas fa-cloud-moon'></i>";
     }
 } else {
     $icon = "Error";

@@ -3328,7 +3328,9 @@ body:not(.open-overlay) .header-area.layout-01{
     width: 100%;
     align-items: center;
     margin: 0;
-    box-shadow: 0px 0px 11px 3px rgb(103 111 120 / 83%);
+    /* box-shadow: 0px 0px 11px 3px rgb(103 111 120 / 83%); */
+    /* border-radius: 50px 50px 0px 0px; */
+    box-shadow: 0px 0px 20px 0px rgb(10 124 251);
     border-radius: 50px 50px 0px 0px;
 }
 .mobile-footer .mobile-footer-inner>div{

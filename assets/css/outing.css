@@ -1,5 +1,6 @@
 #page-m {
-    background-image: url('../design/home.png');
+    /* background-image: url('../design/home.png'); */
+    background: linear-gradient(45deg, #00346e, #00346e , #00346e);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -24,4 +25,32 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.header-profiles-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    padding: 0px 10px;
+    border-radius: 100%;
+    width: 45px;
+    height: 45px;
+    margin-bottom: 10px;
+    background-image: url('../3d/user-account.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.list-menu-m {
+    background-color: #fff;
+    height: 389px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 100000;
+    padding: 17px;
+    margin-top: 150px;
+    border-radius: 45px 45px 0px 0px;
 }
