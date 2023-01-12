@@ -80,7 +80,7 @@ $RIndex = mysqli_fetch_array($Index);
                         </div>
                     </a>
                     <!-- Galery -->
-                    <a href="train.php">
+                    <a href="galery.php">
                         <div style="padding: 10px;background: #fff;margin: 15px;border-radius: 10px;box-shadow: 2px 2px 3px 3px rgb(219 219 219);">
                             <img src="assets/menu/picture.png" alt="Galery" style="width: 485px;">
                         </div>
@@ -100,8 +100,6 @@ $RIndex = mysqli_fetch_array($Index);
                 </div>
             <?php } ?>
             <?php if ($RIndex['role'] == 'admin') { ?>
-
-
                 <div style="display: flex;justify-content: space-between;align-items: center;margin-top: -7px;">
                     <!-- Train List -->
                     <a href="train.php">
@@ -142,7 +140,7 @@ $RIndex = mysqli_fetch_array($Index);
                 </div>
                 <div style="display: flex;justify-content: space-between;align-items: center;margin-top: -15px;">
                     <!-- Schedule -->
-                    <a href="train.php">
+                    <a href="schedule.php">
                         <div style="padding: 10px;background: #fff;margin: 15px;border-radius: 10px;box-shadow: 2px 2px 3px 3px rgb(219 219 219);">
                             <img src="assets/menu/event.png" alt="Schedule" style="width: 495px;">
                         </div>
@@ -151,7 +149,7 @@ $RIndex = mysqli_fetch_array($Index);
                         </div>
                     </a>
                     <!-- Galery -->
-                    <a href="train.php">
+                    <a href="galery.php">
                         <div style="padding: 10px;background: #fff;margin: 15px;border-radius: 10px;box-shadow: 2px 2px 3px 3px rgb(219 219 219);">
                             <img src="assets/menu/picture.png" alt="Galery" style="width: 485px;">
                         </div>
@@ -160,7 +158,7 @@ $RIndex = mysqli_fetch_array($Index);
                         </div>
                     </a>
                     <!-- Master -->
-                    <a href="train.php">
+                    <a href="master.php">
                         <div style="padding: 10px;background: #fff;margin: 15px;border-radius: 10px;box-shadow: 2px 2px 3px 3px rgb(219 219 219);">
                             <img src="assets/menu/master-data.png" alt="Master" style="width: 485px;">
                         </div>

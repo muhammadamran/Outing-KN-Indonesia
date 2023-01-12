@@ -332,3 +332,25 @@ div#page-v-web {
     margin-top: 24px;
     border: solid #fff;
 }
+
+.lingkaran111 {
+    width: 45px;
+    height: 45px;
+    background: #ffffff;
+    border-radius: 100%;
+    margin-left: -45px;
+    border: solid #366a97;
+}
+
+.land-1-s {
+    padding: 25px;
+    /* background: linear-gradient(45deg, #00346e, #00346e); */
+    background-image: url(../apps/dd.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
