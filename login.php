@@ -3,10 +3,14 @@ include "include/db.php";
 if (isset($_POST['submit'])) {
     $user = $_POST['username'];
     $pass = $_POST['password'];
+    $dd   = substr($pass, 0, 2);
+    $mm   = substr($pass, 2, 2);
+    $yy   = substr($pass, 4, 4);
+    $Spas = $dd . "." . $mm . "." . $yy;
     $log_type = "login";
     $date_log = date('Y-m-d H:i:m');
 
-    $query = $db->query("SELECT * FROM tb_users WHERE username='$user' AND date_birthday='$pass'");
+    $query = $db->query("SELECT * FROM tb_users WHERE username='$user' AND date_birthday='$Spas'");
     if (mysqli_num_rows($query) == 1) {
         session_start();
         $_SESSION['username'] = $user;

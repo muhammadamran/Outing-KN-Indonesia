@@ -75,7 +75,7 @@ $GT = 'style="margin-top: 140px;"';
                 <div style="display: flex;justify-content: center;align-items: center;margin-top: 5px;text-align: center;">
                     <div>
                         <h1 style="color: #000;font-weight: 600;">
-                            <?php if ($RVote['name_group'] == NULL) { ?>
+                            <?php if ($RVote == NULL) { ?>
                                 Please wait for the next participan ⏱
                             <?php } else { ?>
                                 Let's give a vote for
@@ -92,7 +92,7 @@ $GT = 'style="margin-top: 140px;"';
                 <!-- Get Started -->
                 <div class=" row" <?= $GT ?>>
                     <div class="col-sm-12">
-                        <?php if ($RVote['name_group'] == NULL) { ?>
+                        <?php if ($RVote == NULL) { ?>
                             <button type="button" class="btn btn-block btn-get"> Get Started <i class="fas fa-arrow-right"></i></button>
                         <?php } else { ?>
                             <button type="submit" class="btn btn-block btn-get"> Get Started <i class="fas fa-arrow-right"></i></button>
