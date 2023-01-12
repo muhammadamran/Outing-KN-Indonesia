@@ -108,7 +108,6 @@ $RYVote     = mysqli_fetch_array($Yvote);
                                                                         <font><i class="fas fa-users"></i> <?= $RTP['TP']; ?></font>
                                                                     </center>
                                                                 <?php } ?>
-                                                                ?>
                                                             </div>
                                                             <font style="font-size: 8px;font-weight: 300;">People<font style="color: transparent;">.</font>Vote</font>
                                                         </div>
