@@ -73,7 +73,7 @@ $RIndex = mysqli_fetch_array($Index);
                     </div>
                 </a>
                 <!-- Champions -->
-                <a href="train.php">
+                <a href="awards.php">
                     <div style="padding: 10px;background: #fff;margin: 15px;border-radius: 10px;box-shadow: 2px 2px 3px 3px rgb(219 219 219);">
                         <img src="assets/menu/successful.png" alt="Champions" style="width: 485px;">
                     </div>
