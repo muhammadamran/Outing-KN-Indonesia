@@ -42,9 +42,6 @@
     }
 </style>
 <?php
-$userRole   = $_SESSION['username'];
-$role       = $db->query("SELECT * FROM tb_member WHERE username='$userRole' ");
-$Rrole      = mysqli_fetch_array($role);
 // DATE DAFULT
 date_default_timezone_set("Asia/jakarta");
 

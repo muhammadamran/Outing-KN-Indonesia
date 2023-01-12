@@ -4,6 +4,10 @@
 <?php include "include/dataTablesCSS.php"; ?>
 <?php include "include/header.php"; ?>
 <?php
+$userRole   = $_SESSION['username'];
+$role       = $db->query("SELECT * FROM tb_member WHERE username='$userRole' ");
+$Rrole      = mysqli_fetch_array($role);
+
 if (isset($_GET["checkin"])) {
     $train_go_check_in_time =   date('Y-m-d H:i:m');
     $train_go_check_in_by   =   $_SESSION['username'];
@@ -13,8 +17,8 @@ if (isset($_GET["checkin"])) {
         $all = implode(",", $_POST["train"]);
 
         $query = $db->query("UPDATE tb_member SET train_go_check_in='Check In',
-                                                        train_go_check_in_time='$train_go_check_in_time',
-                                                        train_go_check_in_by='$train_go_check_in_by'
+                                                  train_go_check_in_time='$train_go_check_in_time',
+                                                  train_go_check_in_by='$train_go_check_in_by'
                              WHERE id IN ($all)");
         if ($query) {
             echo "<script>window.location.href='train.php?Success';</script>";
@@ -261,6 +265,15 @@ if (isset($_GET["cencel"])) {
                                     <?php } ?>
                                 </tbody>
                             </table>
+                            <?php if ($Rrole['role'] == 'admin') { ?>
+                                <div class="page-divider"></div>
+                                <div style="display: flex;justify-content: flex-start;align-items: center;margin-bottom: 10px;">
+                                    <button class=" btn btn-sm btn-primary" id="btn-checkin-yes" style="margin-left: 10px;"><i class="fas fa-user-check"></i> Check In</button>
+                                    <button class="btn btn-sm btn-green" id="btn-checkin-cencel" style="margin-left: 10px;"><i class="fas fa-user-times"></i> Cencel</button>
+                                    <a href="train_data.php" class="btn btn-sm btn-info" id="btn-download" style="margin-left: 10px;"><i class="far fa-file-excel"></i> Download</a>
+                                </div>
+                                <div class="page-divider"></div>
+                            <?php } ?>
                         </div>
                     </form>
                 </div>

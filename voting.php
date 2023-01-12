@@ -5,6 +5,8 @@
 $userVote = $_SESSION['username'];
 $Vote     = $db->query("SELECT * FROM tb_talent WHERE status_group='Show'");
 $RVote    = mysqli_fetch_array($Vote);
+
+$GT = 'style="margin-top: 140px;"';
 ?>
 <title>Vote | Kuehne+Nagel Indonesia - BDG Gathering</title>
 <div class="page-contain">
@@ -30,6 +32,9 @@ $RVote    = mysqli_fetch_array($Vote);
                 </div>
                 <!-- Alert -->
                 <?php if (isset($_GET['Success'])) { ?>
+                    <?php
+                    $GT = 'style="margin-top: 70px;"';
+                    ?>
                     <div style="display: flex;justify-content: center;align-items: center;margin-top: 35px;text-align: center;">
                         <div>
                             <font style="font-size:16px;color: #000;font-weight: 600;">
@@ -41,6 +46,9 @@ $RVote    = mysqli_fetch_array($Vote);
                 <?php } ?>
                 <!-- Alert -->
                 <?php if (isset($_GET['Failed'])) { ?>
+                    <?php
+                    $GT = 'style="margin-top: 70px;"';
+                    ?>
                     <div style="display: flex;justify-content: center;align-items: center;margin-top: 35px;text-align: center;">
                         <div>
                             <font style="font-size:16px;color: #000;font-weight: 600;">
@@ -52,6 +60,9 @@ $RVote    = mysqli_fetch_array($Vote);
                 <?php } ?>
                 <!-- Alert -->
                 <?php if (isset($_GET['Info'])) { ?>
+                    <?php
+                    $GT = 'style="margin-top: 70px;"';
+                    ?>
                     <div style="display: flex;justify-content: center;align-items: center;margin-top: 35px;text-align: center;">
                         <div>
                             <font style="font-size:16px;color: #000;font-weight: 600;">
@@ -74,7 +85,7 @@ $RVote    = mysqli_fetch_array($Vote);
             </div>
             <div class="container">
                 <!-- Get Started -->
-                <div class=" row" style="margin-top: 140px;">
+                <div class=" row" <?= $GT ?>>
                     <div class="col-sm-12">
                         <button type="submit" class="btn btn-block btn-get"> Get Started <i class="fas fa-arrow-right"></i></button>
                         <?php

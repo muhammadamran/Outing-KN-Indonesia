@@ -44,9 +44,6 @@
     }
 </style>
 <?php
-$userRole   = $_SESSION['username'];
-$role       = $db->query("SELECT * FROM tb_member WHERE username='$userRole' ");
-$Rrole      = mysqli_fetch_array($role);
 // DATE DAFULT
 date_default_timezone_set("Asia/jakarta");
 
@@ -147,11 +144,6 @@ function NPWP($value)
     $hasil = number_format($value, 0, ',', '.');
     return $hasil;
 }
-
-
-$userInfo   = $_SESSION['username'];
-$usIn       = $db->query("SELECT * FROM tb_member WHERE username='$userInfo' ");
-$RusIn      = mysqli_fetch_array($usIn);
 
 $waktu = gmdate("H:i", time() + 7 * 3600);
 $t = explode(":", $waktu);

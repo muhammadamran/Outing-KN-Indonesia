@@ -2,15 +2,14 @@
 include "include/db.php";
 if (isset($_POST['submit'])) {
     $user = $_POST['username'];
+    $pass = $_POST['password'];
     $log_type = "login";
     $date_log = date('Y-m-d H:i:m');
 
-    $query = $db->query("SELECT * FROM tb_member WHERE username='$user'");
+    $query = $db->query("SELECT * FROM tb_users WHERE username='$user' AND date_birthday='$pass'");
     if (mysqli_num_rows($query) == 1) {
         session_start();
         $_SESSION['username'] = $user;
-        $_SESSION['role']     = $role;
-        $_SESSION['train_go'] = $train;
         header("Location: ./index.php?SignInsuccess=true");
     } else {
         header("Location: ./login.php?SignInfailed=true");
@@ -66,6 +65,7 @@ if (isset($_POST['submit'])) {
                             <img src="assets/apps/outing.png" alt="IMG" style="width: 300px;">
                         </div>
                     </span>
+                    <!-- Username -->
                     <div class="wrap-input100 validate-input" data-validate="firstname.lastname (namadepan.namabelakang)">
                         <input class="input100" type="text" name="username" placeholder="firstname.lastname">
                         <span class="focus-input100"></span>
@@ -77,6 +77,25 @@ if (isset($_POST['submit'])) {
                         <center>
                             <small style="color:#fff;font-size:10px"><i>Bahasa: Masukkan namadepan.namabelakang</i></small>
                         </center>
+                    </div>
+                    <!-- Password -->
+                    <div class="wrap-input100 validate-input" data-validate="Date of birth (ddmmyyyy)">
+                        <input class="input100" type="password" name="password" id="password" placeholder="Date of birth (ddmmyyyy)">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <div style="margin-top: -15px;">
+                        <center>
+                            <small style="color:#fff;font-size:10px"><i>Bahasa: Tanggal Lahir (hhbbtttt) Ex:31121990</i></small>
+                        </center>
+                    </div>
+                    <div class="form-group" style="margin-left: 10px;">
+                        <div class="checkbox checkbox-css">
+                            <input type="checkbox" id="ckb1" onclick="myFunction()" />
+                            <label for="ckb1" style="color: #fff;">Show password</label>
+                        </div>
                     </div>
                     <div class="container-login100-form-btn">
                         <button class="login100-form-btn" type="submit" name="submit">
@@ -131,6 +150,17 @@ if (isset($_POST['submit'])) {
                 html: 'Logout successful!<br><i>Bahasa: Logout berhasil!</i>'
             })
             history.replaceState({}, '', './login.php');
+        }
+    </script>
+    <!-- Show Password -->
+    <script type="text/javascript">
+        function myFunction() {
+            var x = document.getElementById("password");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
         }
     </script>
 </body>

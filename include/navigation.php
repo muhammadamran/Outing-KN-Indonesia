@@ -1,7 +1,7 @@
 <?php $uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)); ?>
 <?php
 $userHeader = $_SESSION['username'];
-$header     = $db->query("SELECT * FROM tb_member WHERE username='$userHeader' ");
+$header     = $db->query("SELECT * FROM tb_users WHERE username='$userHeader' ");
 $Rheader    = mysqli_fetch_array($header);
 if ($Rheader['role'] == 'admin') {
     $showS = 'show';

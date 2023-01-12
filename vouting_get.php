@@ -3,6 +3,11 @@
 <?php include "include/head_r.php"; ?>
 <?php
 $userVote   = $_SESSION['username'];
+
+$GetU     = $db->query("SELECT * FROM tb_users WHERE username='$userVote'");
+$RGetU    = mysqli_fetch_array($GetU);
+$Votee    = $RGetU['vote'];
+
 $GID        = $_GET['ID'];
 $GName      = $_GET['NAME'];
 
@@ -16,13 +21,14 @@ if (isset($_POST["GetVote"])) {
     $forQone    = $_POST['forQone'];
     $forQtwo    = $_POST['forQtwo'];
     $status     = 'Done';
+    $datetime   = date('Y-m-d H:i:m');
 
-    if ($forQone == '0' & $forQtwo == '0') {
+    if ($forQone == NULL & $forQtwo == NULL) {
         echo "<script>window.location.href='voting.php?Info';</script>";
     } else {
-        $query = $db->query("INSERT INTO tb_vote (id,group_id,group_name,username,star_one,star_two,status)
+        $query = $db->query("INSERT INTO tb_vote (id,group_id,group_name,username,level,star_one,star_two,status,date_time)
                         VALUES
-                        ('','" . $ID_T . "','" . $ID_NAME . "','" . $USER_NAME . "','" . $forQone . "','" . $forQtwo . "','" . $status . "')");
+                        ('','" . $ID_T . "','" . $ID_NAME . "','" . $USER_NAME . "','" . $Votee . "','" . $forQone . "','" . $forQtwo . "','" . $status . "','" . $datetime . "')");
         if ($query) {
             echo "<script>window.location.href='voting.php?Success';</script>";
         } else {
