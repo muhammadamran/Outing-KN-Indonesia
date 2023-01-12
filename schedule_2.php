@@ -3,7 +3,7 @@
 <?php include "include/head_r.php"; ?>
 <?php
 ?>
-<title>Schedule <?= $RYVote['t_vote']; ?> | Kuehne+Nagel Indonesia - BDG Gathering</title>
+<title>Schedule Day 2 <?= $RYVote['t_vote']; ?> | Kuehne+Nagel Indonesia - BDG Gathering</title>
 <div class="page-contain">
     <div id="main-content" class="main-content">
         <div class="container">
@@ -16,7 +16,7 @@
             </div>
             <div style="display: flex;margin-top: -25px;justify-content: center;">
                 <div></div>
-                <div style="font-size: 20px;font-weight: 900;color: #000;">Schedule</div>
+                <div style="font-size: 20px;font-weight: 900;color: #000;">Schedule Day 2</div>
                 <div></div>
             </div>
             <div style="display: flex;justify-content: center;align-items: center;">

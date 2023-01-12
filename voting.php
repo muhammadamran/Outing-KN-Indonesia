@@ -75,10 +75,15 @@ $GT = 'style="margin-top: 140px;"';
                 <div style="display: flex;justify-content: center;align-items: center;margin-top: 5px;text-align: center;">
                     <div>
                         <h1 style="color: #000;font-weight: 600;">
-                            Let's give a vote for
-                            <font style="color: #00346e;">✨<?= $RVote['name_group']; ?></font>
-                            <input type="hidden" name="ID" value="<?= $RVote['perform']; ?>">
-                            <input type="hidden" name="NAME" value="<?= $RVote['name_group']; ?>">
+                            <?php if ($RVote['name_group'] == NULL) { ?>
+                                Please wait for the next participan ⏱
+                            <?php } else { ?>
+                                Let's give a vote for
+                                <font style="color: #00346e;">✨<?= $RVote['name_group']; ?></font>
+                                <input type="hidden" name="ID" value="<?= $RVote['perform']; ?>">
+                                <input type="hidden" name="NAME" value="<?= $RVote['name_group']; ?>">
+                            <?php } ?>
+
                         </h1>
                     </div>
                 </div>
@@ -87,7 +92,11 @@ $GT = 'style="margin-top: 140px;"';
                 <!-- Get Started -->
                 <div class=" row" <?= $GT ?>>
                     <div class="col-sm-12">
-                        <button type="submit" class="btn btn-block btn-get"> Get Started <i class="fas fa-arrow-right"></i></button>
+                        <?php if ($RVote['name_group'] == NULL) { ?>
+                            <button type="button" class="btn btn-block btn-get"> Get Started <i class="fas fa-arrow-right"></i></button>
+                        <?php } else { ?>
+                            <button type="submit" class="btn btn-block btn-get"> Get Started <i class="fas fa-arrow-right"></i></button>
+                        <?php } ?>
                         <?php
                         $Yvote  = $db->query("SELECT COUNT(*) AS t_vote FROM tb_vote WHERE username='$userVote '");
                         $RYVote = mysqli_fetch_array($Yvote);
