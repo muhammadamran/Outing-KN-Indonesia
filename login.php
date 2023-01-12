@@ -70,7 +70,7 @@ if (isset($_POST['submit'])) {
                         </div>
                     </span>
                     <!-- Username -->
-                    <div class="wrap-input100 validate-input" data-validate="firstname.lastname (namadepan.namabelakang)">
+                    <div class="wrap-input100 validate-input" data-validate="Firstname.Lastname (Namadepan.Namabelakang)">
                         <input class="input100" type="text" name="username" placeholder="firstname.lastname">
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
@@ -79,7 +79,7 @@ if (isset($_POST['submit'])) {
                     </div>
                     <div style="margin-top: -15px;">
                         <center>
-                            <small style="color:#fff;font-size:10px"><i>Bahasa: Masukkan namadepan.namabelakang</i></small>
+                            <small style="color:#fff;font-size:10px"><i>Bahasa: Masukkan Namadepan.Namabelakang</i></small>
                         </center>
                     </div>
                     <!-- Password -->
