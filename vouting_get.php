@@ -13,8 +13,6 @@ $GName      = $_GET['NAME'];
 
 $Vote     = $db->query("SELECT * FROM tb_vote WHERE group_id='$GID' AND group_name='$GName' AND username='$userVote'");
 $RVote    = mysqli_fetch_array($Vote);
-var_dump($RVote);
-exit;
 
 if (isset($_POST["GetVote"])) {
     $ID_T       = $_POST['GID'];
@@ -96,11 +94,11 @@ if (isset($_POST["GetVote"])) {
                 </div>
             </div>
             <div class="container">
-                <?php if ($RVote['status'] == 'Done') { ?>
+                <?php if ($RVote == NULL) { ?>
                     <!-- Submit -->
                     <div class=" row" style="margin-top: 65px;">
                         <div class="col-sm-12">
-                            <a href="voting.php" class="btn btn-block btn-get">🎉 Thank You for your Vote!</a>
+                            <button type="submit" name="GetVote" class="btn btn-block btn-get"> Done</button>
                         </div>
                     </div>
                     <!-- End Submit -->
@@ -108,7 +106,7 @@ if (isset($_POST["GetVote"])) {
                     <!-- Submit -->
                     <div class=" row" style="margin-top: 65px;">
                         <div class="col-sm-12">
-                            <button type="submit" name="GetVote" class="btn btn-block btn-get"> Done</button>
+                            <a href="voting.php" class="btn btn-block btn-get">🎉 Thank You for your Vote!</a>
                         </div>
                     </div>
                     <!-- End Submit -->
@@ -119,7 +117,24 @@ if (isset($_POST["GetVote"])) {
 </div>
 <?php include "include/navigation.php"; ?>
 <?php include "include/jsparty_r.php"; ?>
-<?php if ($RVote['status'] == 'Done') { ?>
+<?php if ($RVote == NULL) { ?>
+    <script type="text/javascript">
+        $("#reviewOne").rating({
+            "value": 0,
+            "click": function(e) {
+                console.log(e);
+                $("#forQone").val(e.stars);
+            }
+        });
+        $("#reviewTwo").rating({
+            "value": 0,
+            "click": function(e) {
+                console.log(e);
+                $("#forQtwo").val(e.stars);
+            }
+        });
+    </script>
+<?php } else { ?>
     <script type="text/javascript">
         $("#reviewOne").rating({
             "value": <?= $RVote['star_one'] ?>,
@@ -130,23 +145,6 @@ if (isset($_POST["GetVote"])) {
         });
         $("#reviewTwo").rating({
             "value": <?= $RVote['star_two'] ?>,
-            "click": function(e) {
-                console.log(e);
-                $("#forQtwo").val(e.stars);
-            }
-        });
-    </script>
-<?php } else { ?>
-    <script type="text/javascript">
-        $("#reviewOne").rating({
-            "value": 0,
-            "click": function(e) {
-                console.log(e);
-                $("#forQone").val(e.stars);
-            }
-        });
-        $("#reviewTwo").rating({
-            "value": 0,
             "click": function(e) {
                 console.log(e);
                 $("#forQtwo").val(e.stars);
