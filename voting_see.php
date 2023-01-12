@@ -67,7 +67,7 @@ $RYVote     = mysqli_fetch_array($Yvote);
                                     <div style="margin: 10px;">
                                         <div class="land-<?= $no ?>">
                                             <div style="display: flex;justify-content: space-between;align-items: center;">
-                                                <div style="margin-left: 15px;">
+                                                <div style="margin-left: 0px;">
                                                     <font style="font-size: 12px;">
                                                         <?= $row['name_group']; ?>
                                                     </font>

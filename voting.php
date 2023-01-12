@@ -102,7 +102,6 @@ $GT = 'style="margin-top: 140px;"';
 </div>
 <?php include "include/navigation.php"; ?>
 <?php include "include/jsparty.php"; ?>
-
 <script type="text/javascript">
     window.setTimeout(function() {
         window.location.reload();

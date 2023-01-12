@@ -187,6 +187,18 @@ div#page-v {
     color: #fff;
     font-weight: 900;
 }
+.land-11 {
+    padding: 25px;
+    background: linear-gradient(45deg, #08c792, #08c792);
+    /* background-image: url('../apps/dd.png'); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 900;
+}
+
 .land-2 {
     padding: 25px;
     /* background: linear-gradient(45deg, #ffeb3b, #00bcd4); */
@@ -287,4 +299,36 @@ div#page-v {
     width: 45px;
     height: 45px;
     margin-bottom: 0px;
+}
+
+.icon-awards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #00346f, #19487c);
+    padding: 10px;
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    margin-top: 12px;
+    border: solid #fff;
+}
+
+div#page-v-web {
+    background: #00346e;
+    height: 110px;
+    border-radius: 0px 0px 50px 50px;
+}
+
+.icon-ok-ok-web {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #003369;
+    padding: 10px;
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+    margin-top: 24px;
+    border: solid #fff;
 }

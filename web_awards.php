@@ -6,28 +6,21 @@ $Vote     = $db->query("SELECT * FROM tb_vote");
 $RVote    = mysqli_fetch_array($Vote);
 ?>
 <title>Awards | Kuehne+Nagel Indonesia - BDG Gathering</title>
-<div class="page-contain" id="page-v">
+<div class="page-contain" id="page-v-web">
     <div id="main-content" class="main-content">
         <div class="container">
-            <div style="display: flex;margin-top: 10px;justify-content: space-between;">
-                <div>
-                    <a href="#" onclick="history.back()" style="color:#fff">
-                        <i class="fas fa-arrow-left"></i> Back
-                    </a>
-                </div>
-            </div>
             <div style="display: flex;margin-top: -25px;justify-content: center;">
                 <div></div>
                 <div style="font-size: 20px;font-weight: 900;color: #fff;">Awards</div>
                 <div></div>
             </div>
             <div style="display: flex;justify-content: center;align-items: center;">
-                <div class="icon-ok-ok">
+                <div class="icon-ok-ok-web">
                     <img src="assets/3d/trophy-dynamic-premium.png" alt="Vote" style="width: 700px;">
                 </div>
             </div>
             <!-- KN Show Ratings -->
-            <div style="display: flex;justify-content: center;align-items: center;margin-top: 17px;">
+            <div style="display: flex;justify-content: center;align-items: center;margin-top: 5px;">
                 <div style="display: flex;justify-content: flex-start;align-items: center;">
                     <div style="font-size: 35px;color: #003369;margin-bottom: 5px;">
                         <i class="fas fa-medal" style="font-size: 25px"></i>
@@ -46,26 +39,25 @@ $RVote    = mysqli_fetch_array($Vote);
         </div>
     </div>
 </div>
-<?php include "include/navigation.php"; ?>
 <?php include "include/jsparty_r.php"; ?>
 <script src="assets/highcharts/highcharts.js"></script>
 <script src="assets/highcharts/modules/exporting.js"></script>
 <script src="assets/highcharts/modules/export-data.js"></script>
 <script src="assets/highcharts/modules/accessibility.js"></script>
 <script type="text/javascript">
-    function Page_Awards() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("ShowAward").innerHTML =
-                    this.responseText;
-            }
-        };
-        xhttp.open("GET", "awards_load.php", true);
-        xhttp.send();
-    }
-    setInterval(function() {
-        Page_Awards();
-    }, 1000);
-    window.onload = Page_Awards;
+    // function Page_Awards() {
+    //     var xhttp = new XMLHttpRequest();
+    //     xhttp.onreadystatechange = function() {
+    //         if (this.readyState == 4 && this.status == 200) {
+    //             document.getElementById("ShowAward").innerHTML =
+    //                 this.responseText;
+    //         }
+    //     };
+    //     xhttp.open("GET", "awards_load.php", true);
+    //     xhttp.send();
+    // }
+    // setInterval(function() {
+    //     Page_Awards();
+    // }, 1000);
+    // window.onload = Page_Awards;
 </script>
