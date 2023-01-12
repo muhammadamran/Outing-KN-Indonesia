@@ -13,6 +13,8 @@ $GName      = $_GET['NAME'];
 
 $Vote     = $db->query("SELECT * FROM tb_vote WHERE group_id='$GID' AND group_name='$GName' AND username='$userVote'");
 $RVote    = mysqli_fetch_array($Vote);
+var_dump($RVote);
+exit;
 
 if (isset($_POST["GetVote"])) {
     $ID_T       = $_POST['GID'];
