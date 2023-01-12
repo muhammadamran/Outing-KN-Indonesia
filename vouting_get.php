@@ -106,7 +106,7 @@ if (isset($_POST["GetVote"])) {
                     <!-- Submit -->
                     <div class=" row" style="margin-top: 65px;">
                         <div class="col-sm-12">
-                            <a href="voting.php" class="btn btn-block btn-get">🎉 Thank You for your Vote!</a>
+                            <a href="voting.php" class="btn btn-block btn-get">🎉 Next Vote</a>
                         </div>
                     </div>
                     <!-- End Submit -->

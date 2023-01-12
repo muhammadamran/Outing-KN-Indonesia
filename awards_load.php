@@ -16,28 +16,52 @@
             // NMT Voters
             $P_NMT        = $db->query("SELECT COUNT(*) AS P_NMT FROM tb_vote WHERE group_name='" . $row['name_group'] . "' AND level='NMT'");
             $RP_NMT       = mysqli_fetch_array($P_NMT);
-            $result_P_NMT = $RP_NMT['P_NMT'];
+            if ($RP_NMT == NULL) {
+                $result_P_NMT = 0;
+            } else {
+                $result_P_NMT = $RP_NMT['P_NMT'];
+            }
             // Employee Voters
             $P_Employee        = $db->query("SELECT COUNT(*) AS P_Employee FROM tb_vote WHERE group_name='" . $row['name_group'] . "' AND level='Employee'");
             $RP_Employee       = mysqli_fetch_array($P_Employee);
-            $result_P_Employee = $RP_Employee['P_Employee'];
+            if ($RP_Employee == NULL) {
+                $result_P_Employee = 0;
+            } else {
+                $result_P_Employee = $RP_Employee['P_Employee'];
+            }
             // External Voters
             $P_External        = $db->query("SELECT COUNT(*) AS P_External FROM tb_vote WHERE group_name='" . $row['name_group'] . "' AND level='External'");
             $RP_External       = mysqli_fetch_array($P_External);
-            $result_P_External = $RP_External['P_External'];
+            if ($RP_External == NULL) {
+                $result_P_External = 0;
+            } else {
+                $result_P_External = $RP_External['P_External'];
+            }
 
             // NMT Star
             $S_NMT             = $db->query("SELECT (star_one + star_two) AS S_NMT FROM tb_vote WHERE group_name='" . $row['name_group'] . "' AND level='NMT'");
             $RS_NMT            = mysqli_fetch_array($S_NMT);
-            $result_S_NMT      = $RS_NMT['S_NMT'];
+            if ($RS_NMT == NULL) {
+                $result_S_NMT  = 0;
+            } else {
+                $result_S_NMT  = $RS_NMT['S_NMT'];
+            }
             // Employee Voters
             $S_Employee        = $db->query("SELECT (star_one + star_two) AS S_Employee FROM tb_vote WHERE group_name='" . $row['name_group'] . "' AND level='Employee'");
             $RS_Employee       = mysqli_fetch_array($S_Employee);
-            $result_S_Employee = $RS_Employee['S_Employee'];
+            if ($RS_Employee == NULL) {
+                $result_S_Employee = 0;
+            } else {
+                $result_S_Employee = $RS_Employee['S_Employee'];
+            }
             // External Voters 
             $S_External        = $db->query("SELECT (star_one + star_two) AS S_External FROM tb_vote WHERE group_name='" . $row['name_group'] . "' AND level='External'");
             $RS_External       = mysqli_fetch_array($S_External);
-            $result_S_External = $RS_External['S_External'];
+            if ($RS_External == NULL) {
+                $result_S_External = 0;
+            } else {
+                $result_S_External = $RS_External['S_External'];
+            }
 
             // AVG
             $NMT_AVG          = ($result_P_NMT * $result_S_NMT) * 0.3;
@@ -54,7 +78,7 @@
             }
 
             if ($Employee_AVG == NULL) {
-                $Employee_R      = 0;
+                $Employee_R = 0;
             } else {
                 $Employee_R = $Employee_AVG / $result_P_Employee;
             }
