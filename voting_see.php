@@ -80,22 +80,35 @@ $RYVote     = mysqli_fetch_array($Yvote);
                                                                 <?php
                                                                 $OT     = $db->query("SELECT (star_one + star_two) AS OT FROM tb_vote WHERE username='" . $_SESSION['username'] . "' AND group_name='" . $row['name_group'] . "'");
                                                                 $ROT    = mysqli_fetch_array($OT);
+                                                                if ($ROT == NULL) {
                                                                 ?>
-                                                                <center>
-                                                                    <font><i class="fas fa-star"></i> <?= $ROT['OT']; ?></font>
-                                                                </center>
+                                                                    <center>
+                                                                        <font><i class="fas fa-star"></i> 0</font>
+                                                                    </center>
+                                                                <?php } else { ?>
+                                                                    <center>
+                                                                        <font><i class="fas fa-star"></i> <?= $ROT['OT']; ?></font>
+                                                                    </center>
+                                                                <?php } ?>
                                                             </div>
                                                             <font style="font-size: 8px;font-weight: 300;">Your<font style="color: transparent;">.</font>Star</font>
                                                         </div>
                                                         <div style="margin-left: 145px;">
                                                             <div style="margin-top: 10px;margin-bottom: -12px;">
-                                                                <center>
-                                                                    <?php
-                                                                    $TP     = $db->query("SELECT COUNT(*) AS TP FROM tb_vote WHERE group_name='" . $row['name_group'] . "'");
-                                                                    $RTP    = mysqli_fetch_array($TP);
-                                                                    ?>
-                                                                    <font><i class="fas fa-users"></i> <?= $RTP['TP']; ?></font>
-                                                                </center>
+                                                                <?php
+                                                                $TP     = $db->query("SELECT COUNT(*) AS TP FROM tb_vote WHERE group_name='" . $row['name_group'] . "'");
+                                                                $RTP    = mysqli_fetch_array($TP);
+                                                                if ($RTP == NULL) {
+                                                                ?>
+                                                                    <center>
+                                                                        <font><i class="fas fa-users"></i> 0</font>
+                                                                    </center>
+                                                                <?php } else { ?>
+                                                                    <center>
+                                                                        <font><i class="fas fa-users"></i> <?= $RTP['TP']; ?></font>
+                                                                    </center>
+                                                                <?php } ?>
+                                                                ?>
                                                             </div>
                                                             <font style="font-size: 8px;font-weight: 300;">People<font style="color: transparent;">.</font>Vote</font>
                                                         </div>
