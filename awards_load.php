@@ -1,8 +1,6 @@
 <?php include "include/db.php"; ?>
 <?php include "include/restrict.php"; ?>
 <?php include "include/head_r.php"; ?>
-
-
 <!-- Start -->
 <div style="margin-bottom: 130px;">
     <?php

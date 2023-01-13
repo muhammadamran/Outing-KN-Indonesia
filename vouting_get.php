@@ -96,7 +96,7 @@ if (isset($_POST["GetVote"])) {
             <div class="container">
                 <?php if ($RVote == NULL) { ?>
                     <!-- Submit -->
-                    <div class=" row" style="margin-top: 65px;">
+                    <div class=" row" style="margin-top: 50px;">
                         <div class="col-sm-12">
                             <button type="submit" name="GetVote" class="btn btn-block btn-get"> Done</button>
                         </div>
