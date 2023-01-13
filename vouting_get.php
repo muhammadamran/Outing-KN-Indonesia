@@ -37,7 +37,7 @@ if (isset($_POST["GetVote"])) {
     }
 }
 ?>
-<title>How's the Perfome | Kuehne+Nagel Indonesia - BDG Gathering</title>
+<title>Rate the Team's Performance | Kuehne+Nagel Indonesia - BDG Gathering</title>
 <div class="page-contain" id="page-v">
     <div id="main-content" class="main-content">
         <form action="" method="POST">
@@ -51,7 +51,7 @@ if (isset($_POST["GetVote"])) {
                 </div>
                 <div style="display: flex;margin-top: -25px;justify-content: center;">
                     <div></div>
-                    <div style="font-size: 20px;font-weight: 900;color: #fff;">How's the Perfome</div>
+                    <div style="font-size: 20px;font-weight: 900;color: #fff;">Rate the Team's Performance</div>
                     <div></div>
                 </div>
                 <div style="display: flex;justify-content: center;align-items: center;">
@@ -59,8 +59,9 @@ if (isset($_POST["GetVote"])) {
                         <img src="assets/3d/star-dynamic-premium.png" alt="Vote" style="width: 700px;">
                     </div>
                 </div>
-                <div style="margin-top: 12px;font-size: 20px;font-weight: 500;color: #fff;display: flex;justify-content: center;align-items: center;text-align: center;background: #00346e;padding: 15px 10px 15px 10px;border-radius: 10px;">
-                    Please give your rating for <?= $GName; ?>
+                <div
+                    style="margin-top: 12px;font-size: 20px;font-weight: 500;color: #fff;display: flex;justify-content: center;align-items: center;text-align: center;background: #00346e;padding: 15px 10px 15px 10px;border-radius: 10px;">
+                    Please give your rating to <?= $GName; ?>
                 </div>
                 <div class="page-divider-home"></div>
                 <input type="hidden" name="GID" value="<?= $GID ?>">
@@ -68,11 +69,11 @@ if (isset($_POST["GetVote"])) {
                 <input type="hidden" name="username" value="<?= $userVote ?>">
                 <div style="display: grid;justify-content: center;align-items: center;margin-top: 25px;">
                     <div style="font-size: 17px;font-weight: 800;color:#000">
-                        <font>1. How much you enjoy the show.</font>
+                        <font>1. How much you enjoy the show?</font>
                     </div>
                     <div style="display: flex;justify-content: center;align-items: center;margin-top: 12px;">
                         <div>
-                            <font style="color:#9e9e9e">Vote:&nbsp;&nbsp;</font>
+                            <font style="color:#9e9e9e">Rate:&nbsp;&nbsp;</font>
                         </div>
                         <div style="font-size: 40px;">
                             <div id="reviewOne" class="o-star"></div>
@@ -80,11 +81,11 @@ if (isset($_POST["GetVote"])) {
                         </div>
                     </div>
                     <div style="font-size: 17px;font-weight: 800;color:#000;margin-top: 30px;">
-                        <font>2. How creative is the show.</font>
+                        <font>2. How creative is the show?</font>
                     </div>
                     <div style="display: flex;justify-content: center;align-items: center;margin-top: 12px;">
                         <div>
-                            <font style="color:#9e9e9e">Vote:&nbsp;&nbsp;</font>
+                            <font style="color:#9e9e9e">Rate:&nbsp;&nbsp;</font>
                         </div>
                         <div style="font-size: 40px;">
                             <div id="reviewTwo" class="o-star"></div>
@@ -95,21 +96,23 @@ if (isset($_POST["GetVote"])) {
             </div>
             <div class="container">
                 <?php if ($RVote == NULL) { ?>
-                    <!-- Submit -->
-                    <div class=" row" style="margin-top: 50px;">
-                        <div class="col-sm-12">
-                            <button type="submit" name="GetVote" class="btn btn-block btn-get"> Done</button>
-                        </div>
+                <!-- Submit -->
+                <div class=" row" style="margin-top: 50px;">
+                    <div class="col-sm-12">
+                        <button type="submit" name="GetVote" class="btn btn-block btn-get"><i
+                                class="fas fa-check-circle"></i> Done</button>
                     </div>
-                    <!-- End Submit -->
+                </div>
+                <!-- End Submit -->
                 <?php } else { ?>
-                    <!-- Submit -->
-                    <div class=" row" style="margin-top: 65px;">
-                        <div class="col-sm-12">
-                            <a href="voting.php" class="btn btn-block btn-get">🎉 Next Vote</a>
-                        </div>
+                <!-- Submit -->
+                <div class=" row" style="margin-top: 65px;">
+                    <div class="col-sm-12">
+                        <a href="voting.php" class="btn btn-block btn-get">Next Rate <i
+                                class="fas fa-arrow-right"></i></a>
                     </div>
-                    <!-- End Submit -->
+                </div>
+                <!-- End Submit -->
                 <?php } ?>
             </div>
         </form>
@@ -118,37 +121,37 @@ if (isset($_POST["GetVote"])) {
 <?php include "include/navigation.php"; ?>
 <?php include "include/jsparty_r.php"; ?>
 <?php if ($RVote == NULL) { ?>
-    <script type="text/javascript">
-        $("#reviewOne").rating({
-            "value": 0,
-            "click": function(e) {
-                console.log(e);
-                $("#forQone").val(e.stars);
-            }
-        });
-        $("#reviewTwo").rating({
-            "value": 0,
-            "click": function(e) {
-                console.log(e);
-                $("#forQtwo").val(e.stars);
-            }
-        });
-    </script>
+<script type="text/javascript">
+$("#reviewOne").rating({
+    "value": 0,
+    "click": function(e) {
+        console.log(e);
+        $("#forQone").val(e.stars);
+    }
+});
+$("#reviewTwo").rating({
+    "value": 0,
+    "click": function(e) {
+        console.log(e);
+        $("#forQtwo").val(e.stars);
+    }
+});
+</script>
 <?php } else { ?>
-    <script type="text/javascript">
-        $("#reviewOne").rating({
-            "value": <?= $RVote['star_one'] ?>,
-            "click": function(e) {
-                console.log(e);
-                $("#forQone").val(e.stars);
-            }
-        });
-        $("#reviewTwo").rating({
-            "value": <?= $RVote['star_two'] ?>,
-            "click": function(e) {
-                console.log(e);
-                $("#forQtwo").val(e.stars);
-            }
-        });
-    </script>
+<script type="text/javascript">
+$("#reviewOne").rating({
+    "value": <?= $RVote['star_one'] ?>,
+    "click": function(e) {
+        console.log(e);
+        $("#forQone").val(e.stars);
+    }
+});
+$("#reviewTwo").rating({
+    "value": <?= $RVote['star_two'] ?>,
+    "click": function(e) {
+        console.log(e);
+        $("#forQtwo").val(e.stars);
+    }
+});
+</script>
 <?php } ?>

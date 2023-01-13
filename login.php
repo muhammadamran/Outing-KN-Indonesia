@@ -40,8 +40,10 @@ if (isset($_POST['submit'])) {
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <!-- FONTAWESON 5 -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/solid.css" integrity="sha384-DhmF1FmzR9+RBLmbsAts3Sp+i6cZMWQwNTRsew7pO/e4gvzqmzcpAzhDIwllPonQ" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/fontawesome.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/solid.css"
+        integrity="sha384-DhmF1FmzR9+RBLmbsAts3Sp+i6cZMWQwNTRsew7pO/e4gvzqmzcpAzhDIwllPonQ" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/fontawesome.css"
+        integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous" />
     <!-- Add the v6 core styles and then select the individual styles you need, like Solid and Brands -->
     <link href="node_modules/@fortawesome/fontawesome-free/css/fontawesome.css" rel="stylesheet" />
     <link href="node_modules/@fortawesome/fontawesome-free/css/brands.css" rel="stylesheet" />
@@ -61,7 +63,8 @@ if (isset($_POST['submit'])) {
             <div class="wrap-login100">
                 <form class="login100-form validate-form" action="" method="POST">
                     <span class="login100-form-title">
-                        <div style="display: grid;justify-content: center;align-items: center;margin-bottom: -45px;margin-top: -45px;">
+                        <div
+                            style="display: grid;justify-content: center;align-items: center;margin-bottom: -45px;margin-top: -45px;">
                             <center>
                                 <img src="assets/apps/logo/kn-w.png" alt="IMG" style="width: 200px;">
                             </center>
@@ -70,7 +73,8 @@ if (isset($_POST['submit'])) {
                         </div>
                     </span>
                     <!-- Username -->
-                    <div class="wrap-input100 validate-input" data-validate="Firstname.Lastname (Namadepan.Namabelakang)">
+                    <div class="wrap-input100 validate-input"
+                        data-validate="Firstname.Lastname (Namadepan.Namabelakang)">
                         <input class="input100" type="text" name="username" placeholder="firstname.lastname">
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
@@ -79,12 +83,13 @@ if (isset($_POST['submit'])) {
                     </div>
                     <div style="margin-top: -15px;">
                         <center>
-                            <small style="color:#fff;font-size:10px"><i>Bahasa: Masukkan Namadepan.Namabelakang</i></small>
+                            <small style="color:#fff;font-size:10px"><i>Masukkan Namadepan.Namabelakang</i></small>
                         </center>
                     </div>
                     <!-- Password -->
                     <div class="wrap-input100 validate-input" data-validate="Date of birth (ddmmyyyy)">
-                        <input class="input100" type="password" name="password" id="password" placeholder="Date of birth (ddmmyyyy)">
+                        <input class="input100" type="password" name="password" id="password"
+                            placeholder="Date of birth (ddmmyyyy)">
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
                             <i class="fa fa-calendar" aria-hidden="true"></i>
@@ -92,7 +97,8 @@ if (isset($_POST['submit'])) {
                     </div>
                     <div style="margin-top: -15px;">
                         <center>
-                            <small style="color:#fff;font-size:10px"><i>Bahasa: Tanggal Lahir (hhbbtttt) Ex:31121990</i></small>
+                            <small style="color:#fff;font-size:10px"><i>Tanggal Lahir (hhbbtttt)
+                                    Misalnya: 31121990</i></small>
                         </center>
                     </div>
                     <div class="form-group" style="margin-left: 10px;">
@@ -110,7 +116,8 @@ if (isset($_POST['submit'])) {
                     <center>
                         <div style="display: grid;justify-content: center;align-items: center;margin-bottom: -40px;">
                             <div>
-                                <font style="font-size: 10px;font-weight: 900;color: #fff;">Kuehne+Nagel Indonesia Bandung Gathering</font>
+                                <font style="font-size: 10px;font-weight: 900;color: #fff;">Kuehne+Nagel Indonesia
+                                    Bandung Gathering</font>
                             </div>
                             <div>
                                 <font style="font-size: 14px;font-weight: 900;color: #fff;">14-15 January 2023</font>
@@ -131,41 +138,41 @@ if (isset($_POST['submit'])) {
     <script src="assets/login/vendor/select2/select2.min.js"></script>
     <script src="assets/login/vendor/tilt/tilt.jquery.min.js"></script>
     <script type="text/javascript">
-        $('.js-tilt').tilt({
-            scale: 1.1
-        })
+    $('.js-tilt').tilt({
+        scale: 1.1
+    })
     </script>
     <script src="assets/login/js/main.js"></script>
     <script type="text/javascript">
-        // SIGN IN SUCCESS
-        if (window?.location?.href?.indexOf('SignInfailed') > -1) {
-            Swal.fire({
-                title: 'Login Failed!',
-                icon: 'error',
-                html: 'Your data not found!<br><i>Bahasa: Data anda tidak ditemukan!</i>'
-            })
-            history.replaceState({}, '', './login.php');
-        }
-        // LOGOUT
-        if (window?.location?.href?.indexOf('Logout') > -1) {
-            Swal.fire({
-                title: 'Logout!',
-                icon: 'info',
-                html: 'Logout successful!<br><i>Bahasa: Logout berhasil!</i>'
-            })
-            history.replaceState({}, '', './login.php');
-        }
+    // SIGN IN SUCCESS
+    if (window?.location?.href?.indexOf('SignInfailed') > -1) {
+        Swal.fire({
+            title: 'Login Failed!',
+            icon: 'error',
+            html: 'Your data not found!<br><i> Data anda tidak ditemukan!</i>'
+        })
+        history.replaceState({}, '', './login.php');
+    }
+    // LOGOUT
+    if (window?.location?.href?.indexOf('Logout') > -1) {
+        Swal.fire({
+            title: 'Logout!',
+            icon: 'info',
+            html: 'Logout successful!<br><i>Bahasa: Logout berhasil!</i>'
+        })
+        history.replaceState({}, '', './login.php');
+    }
     </script>
     <!-- Show Password -->
     <script type="text/javascript">
-        function myFunction() {
-            var x = document.getElementById("password");
-            if (x.type === "password") {
-                x.type = "text";
-            } else {
-                x.type = "password";
-            }
+    function myFunction() {
+        var x = document.getElementById("password");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
         }
+    }
     </script>
 </body>
 

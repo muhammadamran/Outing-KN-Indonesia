@@ -18,7 +18,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 15px;
 }
 
 .say-2 {
@@ -51,7 +51,7 @@
     background-size: cover;
     z-index: 100000;
     padding: 17px;
-    margin-top: 150px;
+    margin-top: 60px;
     border-radius: 45px 45px 0px 0px;
 }
 
@@ -353,4 +353,20 @@ div#page-v-web {
     color: #fff;
     font-weight: 900;
     margin-bottom: 10px;
+}
+
+.header-profiles-home-index {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    /* padding: 0px 10px; */
+    border-radius: 100%;
+    width: 45px;
+    height: 45px;
+    /* margin-bottom: 10px; */
+    background-image: url(../3d/user-account.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

@@ -10,7 +10,7 @@ $Yvote      = $db->query("SELECT COUNT(*) AS t_vote FROM tb_vote WHERE username=
 $RYVote     = mysqli_fetch_array($Yvote);
 
 ?>
-<title>Your Vote <?= $RYVote['t_vote']; ?> | Kuehne+Nagel Indonesia - BDG Gathering</title>
+<title>Your Rate <?= $RYVote['t_vote']; ?> | Kuehne+Nagel Indonesia - BDG Gathering</title>
 <div class="page-contain">
     <div id="main-content" class="main-content">
         <div class="container">
@@ -23,7 +23,7 @@ $RYVote     = mysqli_fetch_array($Yvote);
             </div>
             <div style="display: flex;margin-top: -25px;justify-content: center;">
                 <div></div>
-                <div style="font-size: 20px;font-weight: 900;color: #000;">See Your Vote <?= $RYVote['t_vote']; ?></div>
+                <div style="font-size: 20px;font-weight: 900;color: #000;">See Your Rate <?= $RYVote['t_vote']; ?></div>
                 <div></div>
             </div>
             <div style="display: flex;justify-content: center;align-items: center;">
@@ -41,9 +41,11 @@ $RYVote     = mysqli_fetch_array($Yvote);
                             <i class="fas fa-grip-vertical"></i>
                         </div>
                         <div style="margin-left: 5px;">
-                            <font style="color: #003369;font-size: 18px;font-weight: 700;">List KN Show Participants</font>
+                            <font style="color: #003369;font-size: 18px;font-weight: 700;">List KN Show Participants
+                            </font>
                             <div style="margin-top: -7px;">
-                                <font style="font-size: 12px;color: #003369;">Total <?= $RAll['t_talent']; ?> Participants</font>
+                                <font style="font-size: 12px;color: #003369;">Total <?= $RAll['t_talent']; ?>
+                                    Participants</font>
                             </div>
                         </div>
                     </div>
@@ -63,60 +65,63 @@ $RYVote     = mysqli_fetch_array($Yvote);
                                 while ($row = mysqli_fetch_array($dataTable)) {
                                     $no++;
                             ?>
-                                    <!-- Train List -->
-                                    <div style="margin: 10px;">
-                                        <div class="land-<?= $no ?>">
-                                            <div style="display: flex;justify-content: space-between;align-items: center;">
-                                                <div style="margin-left: 0px;">
-                                                    <font style="font-size: 12px;">
-                                                        <?= $row['name_group']; ?>
-                                                    </font>
-                                                    <div style="margin-top: -10px;">
-                                                        <font style="font-weight: 500;font-size: 11px;"><?= $row['desc_group']; ?></font>
-                                                    </div>
-                                                    <div style="display: flex;">
-                                                        <div>
-                                                            <div style="margin-top: 10px;margin-bottom: -12px;">
-                                                                <?php
+                            <!-- Train List -->
+                            <div style="margin: 10px;">
+                                <div class="land-<?= $no ?>">
+                                    <div style="display: flex;justify-content: space-between;align-items: center;">
+                                        <div style="margin-left: 0px;">
+                                            <font style="font-size: 12px;">
+                                                <?= $row['name_group']; ?>
+                                            </font>
+                                            <div style="margin-top: -10px;">
+                                                <font style="font-weight: 500;font-size: 11px;">
+                                                    <?= $row['desc_group']; ?></font>
+                                            </div>
+                                            <div style="display: flex;">
+                                                <div>
+                                                    <div style="margin-top: 10px;margin-bottom: -12px;">
+                                                        <?php
                                                                 $OT     = $db->query("SELECT (star_one + star_two) AS OT FROM tb_vote WHERE username='" . $_SESSION['username'] . "' AND group_name='" . $row['name_group'] . "'");
                                                                 $ROT    = mysqli_fetch_array($OT);
                                                                 if ($ROT == NULL) {
                                                                 ?>
-                                                                    <center>
-                                                                        <font><i class="fas fa-star"></i> 0</font>
-                                                                    </center>
-                                                                <?php } else { ?>
-                                                                    <center>
-                                                                        <font><i class="fas fa-star"></i> <?= $ROT['OT']; ?></font>
-                                                                    </center>
-                                                                <?php } ?>
-                                                            </div>
-                                                            <font style="font-size: 8px;font-weight: 300;">Your<font style="color: transparent;">.</font>Star</font>
-                                                        </div>
-                                                        <div style="margin-left: 145px;">
-                                                            <div style="margin-top: 10px;margin-bottom: -12px;">
-                                                                <?php
+                                                        <center>
+                                                            <font><i class="fas fa-star"></i> 0</font>
+                                                        </center>
+                                                        <?php } else { ?>
+                                                        <center>
+                                                            <font><i class="fas fa-star"></i> <?= $ROT['OT']; ?></font>
+                                                        </center>
+                                                        <?php } ?>
+                                                    </div>
+                                                    <font style="font-size: 8px;font-weight: 300;">Your<font
+                                                            style="color: transparent;">.</font>Star</font>
+                                                </div>
+                                                <div style="margin-left: 145px;">
+                                                    <div style="margin-top: 10px;margin-bottom: -12px;">
+                                                        <?php
                                                                 $TP     = $db->query("SELECT COUNT(*) AS TP FROM tb_vote WHERE group_name='" . $row['name_group'] . "'");
                                                                 $RTP    = mysqli_fetch_array($TP);
                                                                 if ($RTP == NULL) {
                                                                 ?>
-                                                                    <center>
-                                                                        <font><i class="fas fa-users"></i> 0</font>
-                                                                    </center>
-                                                                <?php } else { ?>
-                                                                    <center>
-                                                                        <font><i class="fas fa-users"></i> <?= $RTP['TP']; ?></font>
-                                                                    </center>
-                                                                <?php } ?>
-                                                            </div>
-                                                            <font style="font-size: 8px;font-weight: 300;">People<font style="color: transparent;">.</font>Vote</font>
-                                                        </div>
+                                                        <center>
+                                                            <font><i class="fas fa-users"></i> 0</font>
+                                                        </center>
+                                                        <?php } else { ?>
+                                                        <center>
+                                                            <font><i class="fas fa-users"></i> <?= $RTP['TP']; ?></font>
+                                                        </center>
+                                                        <?php } ?>
                                                     </div>
+                                                    <font style="font-size: 8px;font-weight: 300;">People<font
+                                                            style="color: transparent;">.</font>Rate</font>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                <?php } ?>
+                                </div>
+                            </div>
+                            <?php } ?>
                             <?php } else { ?>
                             <?php } ?>
                         </div>
@@ -130,18 +135,18 @@ $RYVote     = mysqli_fetch_array($Yvote);
 <?php include "include/navigation.php"; ?>
 <?php include "include/jsparty_r.php"; ?>
 <script type="text/javascript">
-    $("#reviewOne").rating({
-        "value": 0,
-        "click": function(e) {
-            console.log(e);
-            $("#forQone").val(e.stars);
-        }
-    });
-    $("#reviewTwo").rating({
-        "value": 0,
-        "click": function(e) {
-            console.log(e);
-            $("#forQtwo").val(e.stars);
-        }
-    });
+$("#reviewOne").rating({
+    "value": 0,
+    "click": function(e) {
+        console.log(e);
+        $("#forQone").val(e.stars);
+    }
+});
+$("#reviewTwo").rating({
+    "value": 0,
+    "click": function(e) {
+        console.log(e);
+        $("#forQtwo").val(e.stars);
+    }
+});
 </script>

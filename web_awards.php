@@ -16,7 +16,7 @@ $RVote    = mysqli_fetch_array($Vote);
             </div>
             <div style="display: flex;justify-content: center;align-items: center;">
                 <div class="icon-ok-ok-web">
-                    <img src="assets/3d/trophy-dynamic-premium.png" alt="Vote" style="width: 700px;">
+                    <img src="assets/3d/trophy-dynamic-premium.png" alt="Awards" style="width: 700px;">
                 </div>
             </div>
             <!-- KN Show Ratings -->
@@ -44,20 +44,3 @@ $RVote    = mysqli_fetch_array($Vote);
 <script src="assets/highcharts/modules/exporting.js"></script>
 <script src="assets/highcharts/modules/export-data.js"></script>
 <script src="assets/highcharts/modules/accessibility.js"></script>
-<script type="text/javascript">
-    // function Page_Awards() {
-    //     var xhttp = new XMLHttpRequest();
-    //     xhttp.onreadystatechange = function() {
-    //         if (this.readyState == 4 && this.status == 200) {
-    //             document.getElementById("ShowAward").innerHTML =
-    //                 this.responseText;
-    //         }
-    //     };
-    //     xhttp.open("GET", "awards_load.php", true);
-    //     xhttp.send();
-    // }
-    // setInterval(function() {
-    //     Page_Awards();
-    // }, 1000);
-    // window.onload = Page_Awards;
-</script>

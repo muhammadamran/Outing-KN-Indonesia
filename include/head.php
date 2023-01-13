@@ -24,8 +24,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <!-- FONTAWESON 5 -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/solid.css" integrity="sha384-DhmF1FmzR9+RBLmbsAts3Sp+i6cZMWQwNTRsew7pO/e4gvzqmzcpAzhDIwllPonQ" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/fontawesome.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/solid.css"
+        integrity="sha384-DhmF1FmzR9+RBLmbsAts3Sp+i6cZMWQwNTRsew7pO/e4gvzqmzcpAzhDIwllPonQ" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/fontawesome.css"
+        integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous" />
     <!-- Add the v6 core styles and then select the individual styles you need, like Solid and Brands -->
     <link href="node_modules/@fortawesome/fontawesome-free/css/fontawesome.css" rel="stylesheet" />
     <link href="node_modules/@fortawesome/fontawesome-free/css/brands.css" rel="stylesheet" />
@@ -39,9 +41,9 @@
     <script src="assets/sweet/sweetalert2.min.js"></script>
 </head>
 <style>
-    body {
-        font-family: Poppins, Open Sans, Helvetica, Arial, sans-serif;
-    }
+body {
+    font-family: Poppins, Open Sans, Helvetica, Arial, sans-serif;
+}
 </style>
 <?php
 // DATE DAFULT
@@ -153,25 +155,25 @@ $menit = $t[1];
 if ($jam >= 00 and $jam < 10) {
     if ($menit > 00 and $menit < 60) {
         $ucapan = "Good morning, ";
-        $icon = "<img src='assets/3d/morning.jpg' alt='Morning' style='width: 55px;'>";
+        $icon = "<img src='assets/3d/morning.jpg' alt='Morning' style='width: 40px;'>";
         // $icon = "<i class='fas fa-sun'></i>";
     }
 } else if ($jam >= 10 and $jam < 15) {
     if ($menit > 00 and $menit < 60) {
         $ucapan = "Good afternoon, ";
-        $icon = "<img src='assets/3d/afternoon.jpg' alt='afternoon' style='width: 55px;'>";
+        $icon = "<img src='assets/3d/afternoon.jpg' alt='afternoon' style='width: 40px;'>";
         // $icon = "<i class='fas fa-sun'></i>";
     }
 } else if ($jam >= 15 and $jam < 18) {
     if ($menit > 00 and $menit < 60) {
         $ucapan = "Good afternoon, ";
-        $icon = "<img src='assets/3d/afternoon.jpg' alt='afternoon' style='width: 55px;'>";
+        $icon = "<img src='assets/3d/afternoon.jpg' alt='afternoon' style='width: 40px;'>";
         // $icon = "<i class='fas fa-cloud-sun'></i>";
     }
 } else if ($jam >= 18 and $jam <= 24) {
     if ($menit > 00 and $menit < 60) {
         $ucapan = "Good evening, ";
-        $icon = "<img src='assets/3d/evening.jpg' alt='evening' style='width: 55px;'>";
+        $icon = "<img src='assets/3d/evening.jpg' alt='evening' style='width: 40px;'>";
         // $icon = "<i class='fas fa-cloud-moon'></i>";
     }
 } else {
@@ -198,7 +200,7 @@ if (strstr($myString, '.')) {
     <!-- Preloader -->
     <div id="biof-loading">
         <div class="biof-loading-center">
-            <div style="position: absolute;left: 50%;top: 53%;width: 255px;margin-top: -60px;margin-left: -125px;">
+            <div style="position: absolute;left: 50%;top: 53%;width: 240px;margin-top: -60px;margin-left: -125px;">
                 <img src="assets/apps/outing.png" width="100%">
             </div>
             <div class="biof-loading-center-absolute">

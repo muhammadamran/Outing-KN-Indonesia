@@ -8,7 +8,7 @@ $RVote    = mysqli_fetch_array($Vote);
 
 $GT = 'style="margin-top: 140px;"';
 ?>
-<title>Vote | Kuehne+Nagel Indonesia - BDG Gathering</title>
+<title>Rate | Kuehne+Nagel Indonesia - BDG Gathering</title>
 <div class="page-contain">
     <div id="main-content" class="main-content">
         <form action="vouting_get.php?id=<?= $RVote['perform']; ?>&name=<?= $RVote['name_group']; ?>" method="GET">
@@ -22,7 +22,7 @@ $GT = 'style="margin-top: 140px;"';
                 </div>
                 <div style="display: flex;margin-top: -25px;justify-content: center;">
                     <div></div>
-                    <div style="font-size: 20px;font-weight: 900;color: #000;">Vote</div>
+                    <div style="font-size: 20px;font-weight: 900;color: #000;">Rate</div>
                     <div></div>
                 </div>
                 <div style="display: flex;justify-content: center;align-items: center;">
@@ -32,56 +32,60 @@ $GT = 'style="margin-top: 140px;"';
                 </div>
                 <!-- Alert -->
                 <?php if (isset($_GET['Success'])) { ?>
-                    <?php
+                <?php
                     $GT = 'style="margin-top: 70px;"';
                     ?>
-                    <div style="display: flex;justify-content: center;align-items: center;margin-top: 35px;text-align: center;">
-                        <div>
-                            <font style="font-size:16px;color: #000;font-weight: 600;">
-                                Thank You for Your Vote!
-                            </font>
-                        </div>
+                <div
+                    style="display: flex;justify-content: center;align-items: center;margin-top: 35px;text-align: center;">
+                    <div>
+                        <font style="font-size:16px;color: #000;font-weight: 600;">
+                            Thank You for Your Rating!
+                        </font>
                     </div>
-                    <!-- Alert -->
+                </div>
+                <!-- Alert -->
                 <?php } ?>
                 <!-- Alert -->
                 <?php if (isset($_GET['Failed'])) { ?>
-                    <?php
+                <?php
                     $GT = 'style="margin-top: 70px;"';
                     ?>
-                    <div style="display: flex;justify-content: center;align-items: center;margin-top: 35px;text-align: center;">
-                        <div>
-                            <font style="font-size:16px;color: #000;font-weight: 600;">
-                                Your Vote Filed, Please try again!
-                            </font>
-                        </div>
+                <div
+                    style="display: flex;justify-content: center;align-items: center;margin-top: 35px;text-align: center;">
+                    <div>
+                        <font style="font-size:16px;color: #000;font-weight: 600;">
+                            Your Rate Filed, Please try again!
+                        </font>
                     </div>
-                    <!-- Alert -->
+                </div>
+                <!-- Alert -->
                 <?php } ?>
                 <!-- Alert -->
                 <?php if (isset($_GET['Info'])) { ?>
-                    <?php
+                <?php
                     $GT = 'style="margin-top: 70px;"';
                     ?>
-                    <div style="display: flex;justify-content: center;align-items: center;margin-top: 35px;text-align: center;">
-                        <div>
-                            <font style="font-size:16px;color: #000;font-weight: 600;">
-                                Please give the Vote!
-                            </font>
-                        </div>
+                <div
+                    style="display: flex;justify-content: center;align-items: center;margin-top: 35px;text-align: center;">
+                    <div>
+                        <font style="font-size:16px;color: #000;font-weight: 600;">
+                            Please give the Vote!
+                        </font>
                     </div>
-                    <!-- Alert -->
+                </div>
+                <!-- Alert -->
                 <?php } ?>
-                <div style="display: flex;justify-content: center;align-items: center;margin-top: 5px;text-align: center;">
+                <div
+                    style="display: flex;justify-content: center;align-items: center;margin-top: 5px;text-align: center;">
                     <div>
                         <h1 style="color: #000;font-weight: 600;">
                             <?php if ($RVote == NULL) { ?>
-                                Please wait for the next participan ⏱
+                            Please wait for the next Participants ⏱
                             <?php } else { ?>
-                                Let's give a vote for
-                                <font style="color: #00346e;">✨<?= $RVote['name_group']; ?></font>
-                                <input type="hidden" name="ID" value="<?= $RVote['perform']; ?>">
-                                <input type="hidden" name="NAME" value="<?= $RVote['name_group']; ?>">
+                            Let's Rate
+                            <font style="color: #00346e;">✨<?= $RVote['name_group']; ?></font>
+                            <input type="hidden" name="ID" value="<?= $RVote['perform']; ?>">
+                            <input type="hidden" name="NAME" value="<?= $RVote['name_group']; ?>">
                             <?php } ?>
 
                         </h1>
@@ -93,15 +97,18 @@ $GT = 'style="margin-top: 140px;"';
                 <div class=" row" <?= $GT ?>>
                     <div class="col-sm-12">
                         <?php if ($RVote == NULL) { ?>
-                            <button type="button" class="btn btn-block btn-get"> Get Started <i class="fas fa-arrow-right"></i></button>
+                        <button type="button" class="btn btn-block btn-get"> Get Started <i
+                                class="fas fa-arrow-right"></i></button>
                         <?php } else { ?>
-                            <button type="submit" class="btn btn-block btn-get"> Get Started <i class="fas fa-arrow-right"></i></button>
+                        <button type="submit" class="btn btn-block btn-get"> Get Started <i
+                                class="fas fa-arrow-right"></i></button>
                         <?php } ?>
                         <?php
                         $Yvote  = $db->query("SELECT COUNT(*) AS t_vote FROM tb_vote WHERE username='$userVote '");
                         $RYVote = mysqli_fetch_array($Yvote);
                         ?>
-                        <a href="voting_see.php" class="btn btn-block btn-vote"> See Your Vote <b><?= $RYVote['t_vote']; ?></b></a>
+                        <!-- <a href="voting_see.php" class="btn btn-block btn-vote"> See Your Vote
+                            <b><?= $RYVote['t_vote']; ?></b></a> -->
                     </div>
                 </div>
                 <!-- End Get Started -->
@@ -112,7 +119,7 @@ $GT = 'style="margin-top: 140px;"';
 <?php include "include/navigation.php"; ?>
 <?php include "include/jsparty.php"; ?>
 <script type="text/javascript">
-    window.setTimeout(function() {
-        window.location.reload();
-    }, 10000);
+window.setTimeout(function() {
+    window.location.reload();
+}, 10000);
 </script>
