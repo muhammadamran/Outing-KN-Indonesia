@@ -92,7 +92,7 @@ $GT = 'style="margin-top: 140px;"';
                     </div>
                 </div>
             </div>
-            <div class="container">
+            <div class="container" style="margin-top: -50px;">
                 <!-- Get Started -->
                 <div class=" row" <?= $GT ?>>
                     <div class="col-sm-12">

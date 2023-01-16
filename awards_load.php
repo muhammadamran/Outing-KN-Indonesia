@@ -5,7 +5,7 @@
 <div style="margin-bottom: 130px;">
     <?php
     $user      = $_SESSION['username'];
-    $dataTable = $db->query("SELECT * FROM tb_talent ORDER BY rating DESC LIMIT 3", 0);
+    $dataTable = $db->query("SELECT * FROM tb_talent ORDER BY rating DESC ", 0);
     if (mysqli_num_rows($dataTable) > 0) {
         $no = 0;
         while ($row = mysqli_fetch_array($dataTable)) {
@@ -151,13 +151,13 @@
             <div>
                 <center>
                     <font style="font-size: 14px;font-weight: 300;color: #fff;text-shadow: 0 0 4px #fafafa;"><i
-                            class="fas fa-star"></i> <?= $Total_SUM_R ?></font>
+                            class="fas fa-star"></i> <?= round($Total_SUM_R, 2); ?></font>
                 </center>
             </div>
         </div>
     </div>
 
-    <div style="display: none;">
+    <div style="display: show;">
         <div class="table-responsive">
             <table>
                 <thead>

@@ -51,16 +51,18 @@ if (isset($_POST["GetVote"])) {
                 </div>
                 <div style="display: flex;margin-top: -25px;justify-content: center;">
                     <div></div>
-                    <div style="font-size: 20px;font-weight: 900;color: #fff;">Rate the Team's Performance</div>
+                    <div style="font-size: 14px;font-weight: 900;color: #fff;margin-top: 2px;">Rate the Team's
+                        Performance</div>
                     <div></div>
                 </div>
-                <div style="display: flex;justify-content: center;align-items: center;">
-                    <div class="icon-ok-ok">
+                <div
+                    style="display: flex;justify-content: center;align-items: center;margin-top: -18px;margin-bottom: 35px;">
+                    <div class="icon-ok-ok-vv">
                         <img src="assets/3d/star-dynamic-premium.png" alt="Vote" style="width: 700px;">
                     </div>
                 </div>
                 <div
-                    style="margin-top: 12px;font-size: 20px;font-weight: 500;color: #fff;display: flex;justify-content: center;align-items: center;text-align: center;background: #00346e;padding: 15px 10px 15px 10px;border-radius: 10px;">
+                    style="margin-top: 12px;font-size: 15px;font-weight: 500;color: #fff;display: flex;justify-content: center;align-items: center;text-align: center;background: #00346e;padding: 5px 10px 5px 10px;border-radius: 10px;">
                     Please give your rating to <?= $GName; ?>
                 </div>
                 <div class="page-divider-home"></div>
@@ -94,7 +96,7 @@ if (isset($_POST["GetVote"])) {
                     </div>
                 </div>
             </div>
-            <div class="container">
+            <div class="container" style="height:100vh">
                 <?php if ($RVote == NULL) { ?>
                 <!-- Submit -->
                 <div class=" row" style="margin-top: 50px;">

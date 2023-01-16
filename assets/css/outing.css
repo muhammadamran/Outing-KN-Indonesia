@@ -92,7 +92,7 @@
     border-radius: 100%;
     width: 217px;
     height: 217px;
-    margin-top: 76px;
+    margin-top: 20px;
 }
 
 .btn-ll {
@@ -369,4 +369,17 @@ div#page-v-web {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.icon-ok-ok-vv {
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #003369;
+        padding: 5px;
+        border-radius: 100%;
+        width: 80px;
+        height: 80px;
+        margin-top: 76px;
+        border: solid #fff;
 }
